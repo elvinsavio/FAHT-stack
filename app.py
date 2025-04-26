@@ -89,7 +89,3 @@ def api():
     response.headers["Content-Type"] = "text/html"
     return response
 
-
-@app.route("/components")
-def components():
-    return render_template("components.html")
