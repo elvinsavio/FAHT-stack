@@ -1,2 +1,2 @@
-# FHT-stack
-A full stack app with Flask HTMX AlpineJs Tailwind
+# FAHT-stack
+A full stack app with Flask, HTMX, AlpineJs, Tailwind.
