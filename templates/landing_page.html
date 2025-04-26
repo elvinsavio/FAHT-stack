@@ -2,6 +2,50 @@
 
 
 {% block content %}
-    <h1>Welcome to the Landing Page!</h1>
-    <p>This is a simple landing page.</p>
+<section class="h-[300px] flex items-center justify-center flex-col px-4 text-center">
+    <h1 class="font-bold text-4xl">Welcome to Landing Page!</h1>
+    <h2 class="mt-2 font-bold text-xl">
+        This site is powered by 
+        <a href="https://flask.palletsprojects.com/en/stable/" class="text-blue-500 hover:underline">Flask</a>,
+        <a href="https://htmx.org/" class="text-blue-500 hover:underline">HTMX</a>,
+        <a href="https://alpinejs.dev/" class="text-blue-500 hover:underline">AlpineJS</a>,
+        <a href="https://tailwindcss.com/" class="text-blue-500 hover:underline">TailwindCSS</a>
+    </h2>
+</section>
+
+<section class="px-4 py-10 max-w-4xl mx-auto">
+    <div class="text-center mb-8">
+        <h3 class="text-2xl font-semibold">Features</h3>
+        <p class="mt-2 text-gray-600">Simple, fast, and reactive templates for your next project.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="p-6 border rounded-lg hover:shadow-lg transition" x-data="{ open: false }" @mouseenter="open = true" @mouseleave="open = false">
+            <h4 class="text-xl font-bold mb-2">Flask</h4>
+            <p x-show="open" class="text-gray-600 transition-all">Lightweight backend framework to handle your server-side logic easily.</p>
+        </div>
+        <div class="p-6 border rounded-lg hover:shadow-lg transition" x-data="{ open: false }" @mouseenter="open = true" @mouseleave="open = false">
+            <h4 class="text-xl font-bold mb-2">HTMX</h4>
+            <p x-show="open" class="text-gray-600 transition-all">Supercharge your HTML with AJAX, WebSockets, and more, without writing JS.</p>
+        </div>
+        <div class="p-6 border rounded-lg hover:shadow-lg transition" x-data="{ open: false }" @mouseenter="open = true" @mouseleave="open = false">
+            <h4 class="text-xl font-bold mb-2">TailwindCSS</h4>
+            <p x-show="open" class="text-gray-600 transition-all">Utility-first CSS for beautiful and highly customizable designs.</p>
+        </div>
+    </div>
+</section>
+
+<section class="px-4 py-10 bg-gray-100">
+    <div class="max-w-2xl mx-auto text-center">
+        <h3 class="text-2xl font-semibold mb-4">Live Demo</h3>
+        <button 
+            hx-get="/some-endpoint" 
+            hx-target="#demo-response" 
+            hx-swap="innerHTML"
+            class="bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600 transition">
+            Load Content
+        </button>
+        <div id="demo-response" class="mt-6 text-gray-700"></div>
+    </div>
+</section>
 {% endblock %}

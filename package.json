@@ -1,0 +1,25 @@
+{
+  "name": "fht-stack",
+  "version": "1.0.0",
+  "description": "A full stack app with Flask HTMX AlpineJs Tailwind",
+  "main": "index.js",
+  "scripts": {
+    "watch": "tailwindcss -i ./static/css/input.css -o ./static/css/output.css --watch",
+    "build": "tailwindcss -i ./static/css/input.css -o ./static/css/output.css --minify"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elvinsavio/FHT-stack.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/elvinsavio/FHT-stack/issues"
+  },
+  "homepage": "https://github.com/elvinsavio/FHT-stack#readme",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.4",
+    "tailwindcss": "^4.1.4"
+  }
+}
