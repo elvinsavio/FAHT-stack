@@ -1,2 +1,2 @@
 # FHT-stack
-A full stack app with FastAPI HTMX Tailwind
+A full stack app with Flask HTMX AlpineJs Tailwind

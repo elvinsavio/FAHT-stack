@@ -1,0 +1,19 @@
+# Python-related files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+
+# Node.js modules
+node_modules/
+
+# Cache files
+*.cache
+*.log
+*.tmp
