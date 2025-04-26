@@ -61,12 +61,6 @@ def generate_data(num_records=5):
     return data_list
 
 
-# Example usage
-random_data = generate_data()
-for item in random_data:
-    print(item)
-
-
 @app.route("/")
 def index():
     return render_template("landing_page.html")
