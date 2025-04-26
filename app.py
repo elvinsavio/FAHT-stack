@@ -88,3 +88,8 @@ def api():
     response = make_response(response, 200)
     response.headers["Content-Type"] = "text/html"
     return response
+
+
+@app.route("/components")
+def components():
+    return render_template("components.html")
