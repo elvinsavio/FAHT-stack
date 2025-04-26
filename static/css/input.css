@@ -68,3 +68,15 @@ html {
 a {
     @apply text-primary hover:underline hover:text-primary/80;
 }
+
+.people-card {
+    @apply flex flex-col gap-2 p-4 bg-card rounded-lg shadow-md items-start ;
+}
+
+.people-card-header{
+    @apply flex flex-col gap-2 items-start;
+}
+
+.people-card-header h2{
+    @apply font-bold text-lg;
+}
