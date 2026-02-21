@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="p-4">
+    <h1>Accordion</h1>
+    <p>
+        This section demonstrates the accordion component, which allows you to toggle the visibility of content
+        sections. Use this component to organize information in a compact and user-friendly way.
+    </p>
+
+    <hr>
+    <div class="flex flex-col gap-1">
+
+        <h3>Accordion Example</h3>
+        <h4>Code</h4>
+        <pre class="bg-muted rounded p-3"><code>&lt;details&gt;
+    &lt;summary&gt;What is the Joke Tax?&lt;/summary&gt;
+    &lt;p&gt;The Joke Tax was a royal decree...&lt;/p&gt;
+&lt;/details&gt;</code></pre>
+        <h4>Example</h4>
+        <details>
+            <summary>What is the Joke Tax?</summary>
+            <p>The Joke Tax was a royal decree that levied a fee on every joke told within the kingdom. The king believed laughter was a luxury, and luxuries must be taxed.</p>
+        </details>
+    </div>
+
+    <hr class="flex flex-col gap-1">
+    <div>
+        <h3>Accordion open by default</h3>
+        <h4>Code</h4>
+        <pre class="bg-muted rounded p-3"><code>&lt;details open&gt;
+    &lt;summary&gt;How much is the tax?&lt;/summary&gt;
+    &lt;p&gt;Every punchline costs one copper coin...&lt;/p&gt;
+&lt;/details&gt;</code></pre>
+        <h4>Example</h4>
+        <details open>
+            <summary>How much is the tax?</summary>
+            <p>Every punchline costs one copper coin. A full jest with setup and delivery is taxed at three coins. The jester's guild has formally protested.</p>
+        </details>
+        <details>
+            <summary>Who enforces the Joke Tax?</summary>
+            <p>The Royal Tax Collectors, known as the Humorless Guard, patrol the streets listening for laughter and issuing fines on the spot.</p>
+        </details>
+        <details>
+            <summary>Can I appeal my joke fine?</summary>
+            <p>Appeals may be filed at the Bureau of Wit and Taxation. However, the bureau chief has not laughed since 1987 and denies all appeals on principle.</p>
+        </details>
+    </div>
+</section>
+{% endblock %}

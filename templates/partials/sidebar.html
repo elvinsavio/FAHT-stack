@@ -1,0 +1,14 @@
+<div class="h-screen hidden md:flex overflow-auto border border-border">
+    <div class="p-4">
+        <h2 class="text-2xl font-bold mb-4">Sidebar</h2>
+        <ul class="space-y-2">
+            <li><a href="#home" class="block px-3 py-2 rounded hover:bg-gray-200">Home</a></li> 
+            <h3>
+                Elements
+            </h3>
+            {% for element in elements %}
+            <li><a href="{{ element.link }}" class="block px-3 py-2 rounded hover:bg-gray-200">{{ element.name }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
