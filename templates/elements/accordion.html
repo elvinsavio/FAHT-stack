@@ -13,38 +13,98 @@
 
         <h3>Accordion Example</h3>
         <h4>Code</h4>
-        <pre class="bg-muted rounded p-3"><code>&lt;details&gt;
+        <pre><code>&lt;details&gt;
     &lt;summary&gt;What is the Joke Tax?&lt;/summary&gt;
     &lt;p&gt;The Joke Tax was a royal decree...&lt;/p&gt;
 &lt;/details&gt;</code></pre>
         <h4>Example</h4>
         <details>
             <summary>What is the Joke Tax?</summary>
-            <p>The Joke Tax was a royal decree that levied a fee on every joke told within the kingdom. The king believed laughter was a luxury, and luxuries must be taxed.</p>
+            <p>The Joke Tax was a royal decree that levied a fee on every joke told within the kingdom. The king
+                believed laughter was a luxury, and luxuries must be taxed.</p>
         </details>
     </div>
 
-    <hr class="flex flex-col gap-1">
-    <div>
+    <hr>
+    <div class="flex flex-col gap-1">
         <h3>Accordion open by default</h3>
         <h4>Code</h4>
-        <pre class="bg-muted rounded p-3"><code>&lt;details open&gt;
+        <pre><code>&lt;details open&gt;
     &lt;summary&gt;How much is the tax?&lt;/summary&gt;
     &lt;p&gt;Every punchline costs one copper coin...&lt;/p&gt;
 &lt;/details&gt;</code></pre>
         <h4>Example</h4>
         <details open>
             <summary>How much is the tax?</summary>
-            <p>Every punchline costs one copper coin. A full jest with setup and delivery is taxed at three coins. The jester's guild has formally protested.</p>
+            <p>Every punchline costs one copper coin. A full jest with setup and delivery is taxed at three coins. The
+                jester's guild has formally protested.</p>
         </details>
         <details>
             <summary>Who enforces the Joke Tax?</summary>
-            <p>The Royal Tax Collectors, known as the Humorless Guard, patrol the streets listening for laughter and issuing fines on the spot.</p>
+            <p>The Royal Tax Collectors, known as the Humorless Guard, patrol the streets listening for laughter and
+                issuing fines on the spot.</p>
         </details>
         <details>
             <summary>Can I appeal my joke fine?</summary>
-            <p>Appeals may be filed at the Bureau of Wit and Taxation. However, the bureau chief has not laughed since 1987 and denies all appeals on principle.</p>
+            <p>Appeals may be filed at the Bureau of Wit and Taxation. However, the bureau chief has not laughed since
+                1987 and denies all appeals on principle.</p>
         </details>
+    </div>
+
+
+    <hr>
+    <div class="flex flex-col gap-1">
+        <h3>Accordion with card</h3>
+        <h4>Code</h4>
+        <pre><code>&lt;div&gt;
+    &lt;h2&gt;FAQ about king tax on jokes&lt;/h2&gt;
+    &lt;details&gt;
+        &lt;summary&gt;Why are jokes being taxed?&lt;/summary&gt;
+        &lt;p&gt;The king needed revenue and noticed people laughing too much for free.&lt;/p&gt;
+    &lt;/details&gt;
+    &lt;details&gt;
+        &lt;summary&gt;...more items&lt;/summary&gt;
+    &lt;/details&gt;
+&lt;/div&gt;</code></pre>
+        <h4>Example</h4>
+        <div class="card max-w-lg mx-auto">
+            <div class="header">
+                <h3>FAQ about king tax on jokes</h3>    
+            </div>
+            <div class="content">
+                <details>
+                    <summary>Why are jokes being taxed?</summary>
+                    <p>The king needed revenue and noticed people laughing too much for free. A royal economist
+                        calculated that the average citizen laughed 47 times a day, which was deemed an untapped
+                        goldmine.</p>
+                </details>
+                <details>
+                    <summary>How much does each joke cost?</summary>
+                    <p>A simple pun is taxed at one copper coin. A full joke with setup and punchline costs three coins.
+                        Wordplay involving the royal family is subject to a luxury surcharge.</p>
+                </details>
+                <details>
+                    <summary>Are knock-knock jokes exempt?</summary>
+                    <p>No. Knock-knock jokes are actually double-taxed due to their repetitive nature and the kingdom's
+                        Anti-Redundancy in Humor Act of 1204.</p>
+                </details>
+                <details>
+                    <summary>What happens if I laugh without paying?</summary>
+                    <p>The Humorless Guard will issue you a Grimace Citation. Repeat offenders are sentenced to perform
+                        stand-up comedy for the king, who has not smiled since the Great Pun Famine.</p>
+                </details>
+                <details>
+                    <summary>Can I buy a joke subscription?</summary>
+                    <p>Yes. The Royal Bureau of Wit offers monthly plans starting at 50 coins, which covers unlimited
+                        puns, two slapstick incidents, and one satirical ballad per week.</p>
+                </details>
+            </div>
+            <div class="footer">
+                <p>Still have questions? Visit the Royal Bureau of Wit and Taxation, open weekdays except Jester's
+                    Holiday.</p>
+                <a href="#">Submit a formal inquiry</a>
+            </div>
+        </div>
     </div>
 </section>
 {% endblock %}
