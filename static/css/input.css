@@ -141,7 +141,8 @@ details {
   }
 
   summary {
-    @apply flex items-center list-none pb-2 hover:underline underline-offset-2;
+    @apply flex items-center list-none pb-2 hover:underline underline-offset-2 rounded cursor-pointer;
+    @apply focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring;
 
     &::-webkit-details-marker {
       display: none;
@@ -158,8 +159,22 @@ details {
     transform: rotate(225deg);
   }
 
+  @media (prefers-reduced-motion: reduce) {
+    summary::after {
+      transition: none;
+    }
+  }
+
   p {
     @apply bg-muted text-muted-foreground rounded p-1 px-2 text-sm !mt-0 leading-tight
+  }
+
+  &[disabled] {
+    @apply opacity-50 cursor-not-allowed;
+
+    summary {
+      @apply cursor-not-allowed pointer-events-none;
+    }
   }
 }
 

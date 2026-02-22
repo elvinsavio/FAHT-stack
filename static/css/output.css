@@ -42,26 +42,10 @@
     --color-foreground: hsl(240 10% 3.9%);
     --color-card: hsl(0 0% 100%);
     --color-card-foreground: hsl(240 10% 3.9%);
-    --color-popover: hsl(0 0% 100%);
-    --color-popover-foreground: hsl(240 10% 3.9%);
-    --color-primary: hsl(142.1 76.2% 36.3%);
-    --color-primary-foreground: hsl(355.7 100% 97.3%);
-    --color-secondary: hsl(240 4.8% 95.9%);
-    --color-secondary-foreground: hsl(240 5.9% 10%);
     --color-muted: hsl(240 4.8% 95.9%);
     --color-muted-foreground: hsl(240 3.8% 46.1%);
-    --color-accent: hsl(240 4.8% 95.9%);
-    --color-accent-foreground: hsl(240 5.9% 10%);
-    --color-destructive: hsl(0 84.2% 60.2%);
-    --color-destructive-foreground: hsl(0 0% 98%);
     --color-border: hsl(240 5.9% 90%);
-    --color-input: hsl(240 5.9% 90%);
     --color-ring: hsl(142.1 76.2% 36.3%);
-    --color-chart-1: hsl(12 76% 61%);
-    --color-chart-2: hsl(173 58% 39%);
-    --color-chart-3: hsl(197 37% 24%);
-    --color-chart-4: hsl(43 74% 66%);
-    --color-chart-5: hsl(27 87% 67%);
   }
 }
 @layer base {
@@ -231,9 +215,6 @@
   .hidden {
     display: none;
   }
-  .table {
-    display: table;
-  }
   .h-screen {
     height: 100vh;
   }
@@ -242,15 +223,6 @@
   }
   .flex-1 {
     flex: 1;
-  }
-  .border-collapse {
-    border-collapse: collapse;
-  }
-  .transform {
-    transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
-  }
-  .resize {
-    resize: both;
   }
   .flex-col {
     flex-direction: column;
@@ -315,18 +287,8 @@
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
   }
-  .text-wrap {
-    text-wrap: wrap;
-  }
   .text-foreground {
     color: var(--color-foreground);
-  }
-  .underline {
-    text-decoration-line: underline;
-  }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
   }
   .hover\:bg-gray-200 {
     &:hover {
@@ -521,14 +483,26 @@ details {
   }
   summary {
     display: flex;
+    cursor: pointer;
     list-style-type: none;
     align-items: center;
+    border-radius: var(--radius);
     padding-bottom: calc(var(--spacing) * 2);
     text-underline-offset: 2px;
     &:hover {
       @media (hover: hover) {
         text-decoration-line: underline;
       }
+    }
+    &:focus-visible {
+      outline-style: var(--tw-outline-style);
+      outline-width: 2px;
+    }
+    &:focus-visible {
+      outline-offset: 2px;
+    }
+    &:focus-visible {
+      outline-color: var(--color-ring);
     }
     &::-webkit-details-marker {
       display: none;
@@ -557,6 +531,11 @@ details {
   &[open] summary::after {
     transform: rotate(225deg);
   }
+  @media (prefers-reduced-motion: reduce) {
+    summary::after {
+      transition: none;
+    }
+  }
   p {
     margin-top: calc(var(--spacing) * 0) !important;
     border-radius: var(--radius);
@@ -568,6 +547,14 @@ details {
     --tw-leading: var(--leading-tight);
     line-height: var(--leading-tight);
     color: var(--color-muted-foreground);
+  }
+  &[disabled] {
+    cursor: not-allowed;
+    opacity: 50%;
+    summary {
+      pointer-events: none;
+      cursor: not-allowed;
+    }
   }
 }
 .card {
@@ -601,26 +588,6 @@ details {
     color: var(--color-muted-foreground);
   }
 }
-@property --tw-rotate-x {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-rotate-y {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-rotate-z {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-skew-x {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-skew-y {
-  syntax: "*";
-  inherits: false;
-}
 @property --tw-space-y-reverse {
   syntax: "*";
   inherits: false;
@@ -635,11 +602,6 @@ details {
   syntax: "*";
   inherits: false;
 }
-@property --tw-outline-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
-}
 @property --tw-tracking {
   syntax: "*";
   inherits: false;
@@ -647,6 +609,11 @@ details {
 @property --tw-leading {
   syntax: "*";
   inherits: false;
+}
+@property --tw-outline-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
 }
 @property --tw-duration {
   syntax: "*";
@@ -724,17 +691,12 @@ details {
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
-      --tw-rotate-x: initial;
-      --tw-rotate-y: initial;
-      --tw-rotate-z: initial;
-      --tw-skew-x: initial;
-      --tw-skew-y: initial;
       --tw-space-y-reverse: 0;
       --tw-border-style: solid;
       --tw-font-weight: initial;
-      --tw-outline-style: solid;
       --tw-tracking: initial;
       --tw-leading: initial;
+      --tw-outline-style: solid;
       --tw-duration: initial;
       --tw-ease: initial;
       --tw-shadow: 0 0 #0000;
