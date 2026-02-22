@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-<section class="p-4">
+<section class="p-4 flex flex-col gap-2">
     <h1>Accordion</h1>
     <p>
         This section demonstrates the accordion component, which allows you to toggle the visibility of content
@@ -9,67 +9,84 @@
     </p>
 
     <hr>
-    <div class="flex flex-col gap-1">
-
+    <div class="flex flex-col gap-4">
         <h3>Accordion Example</h3>
-        <h4>Code</h4>
-        <pre><code>&lt;x-accordion label="What is the Joke Tax?"&gt;
+        <div class="flex flex-col gap-1.5">
+            <span class="text-xs font-mono uppercase tracking-widest text-muted-foreground">Code</span>
+            <pre><code>&lt;x-accordion label="What is the Joke Tax?"&gt;
     &lt;p&gt;The Joke Tax was a royal decree...&lt;/p&gt;
 &lt;/x-accordion&gt;</code></pre>
-        <h4>Example</h4>
-        <x-accordion label="What is the Joke Tax?">
-            <p>The Joke Tax was a royal decree that levied a fee on every joke told within the kingdom. The king
-                believed laughter was a luxury, and luxuries must be taxed.</p>
-        </x-accordion>
+        </div>
+        <div class="flex flex-col gap-1.5">
+            <span class="text-xs font-mono uppercase tracking-widest text-muted-foreground">Preview</span>
+            <div class="rounded-lg border border-border p-4">
+                <x-accordion label="What is the Joke Tax?">
+                    <p>The Joke Tax was a royal decree that levied a fee on every joke told within the kingdom. The king
+                        believed laughter was a luxury, and luxuries must be taxed.</p>
+                </x-accordion>
+            </div>
+        </div>
     </div>
 
     <hr>
-    <div class="flex flex-col gap-1">
+    <div class="flex flex-col gap-4">
         <h3>Accordion open by default</h3>
-        <h4>Code</h4>
-        <pre><code>&lt;x-accordion label="How much is the tax?" open&gt;
+        <div class="flex flex-col gap-1.5">
+            <span class="text-xs font-mono uppercase tracking-widest text-muted-foreground">Code</span>
+            <pre><code>&lt;x-accordion label="How much is the tax?" open&gt;
     &lt;p&gt;Every punchline costs one copper coin...&lt;/p&gt;
 &lt;/x-accordion&gt;</code></pre>
-        <h4>Example</h4>
-        <x-accordion label="How much is the tax?" open>
-            <p>Every punchline costs one copper coin. A full jest with setup and delivery is taxed at three coins. The
-                jester's guild has formally protested.</p>
-        </x-accordion>
-        <x-accordion label="Who enforces the Joke Tax?">
-            <p>The Royal Tax Collectors, known as the Humorless Guard, patrol the streets listening for laughter and
-                issuing fines on the spot.</p>
-        </x-accordion>
-        <x-accordion label="Can I appeal my joke fine?">
-            <p>Appeals may be filed at the Bureau of Wit and Taxation. However, the bureau chief has not laughed since
-                1987 and denies all appeals on principle.</p>
-        </x-accordion>
+        </div>
+        <div class="flex flex-col gap-1.5">
+            <span class="text-xs font-mono uppercase tracking-widest text-muted-foreground">Preview</span>
+            <div class="rounded-lg border border-border p-4">
+                <x-accordion label="How much is the tax?" open>
+                    <p>Every punchline costs one copper coin. A full jest with setup and delivery is taxed at three coins. The
+                        jester's guild has formally protested.</p>
+                </x-accordion>
+                <x-accordion label="Who enforces the Joke Tax?">
+                    <p>The Royal Tax Collectors, known as the Humorless Guard, patrol the streets listening for laughter and
+                        issuing fines on the spot.</p>
+                </x-accordion>
+                <x-accordion label="Can I appeal my joke fine?">
+                    <p>Appeals may be filed at the Bureau of Wit and Taxation. However, the bureau chief has not laughed since
+                        1987 and denies all appeals on principle.</p>
+                </x-accordion>
+            </div>
+        </div>
     </div>
 
-
     <hr>
-    <div class="flex flex-col gap-1">
+    <div class="flex flex-col gap-4">
         <h3>Accordion disabled</h3>
-        <h4>Code</h4>
-        <pre><code>&lt;x-accordion label="This item is unavailable" disabled&gt;
+        <div class="flex flex-col gap-1.5">
+            <span class="text-xs font-mono uppercase tracking-widest text-muted-foreground">Code</span>
+            <pre><code>&lt;x-accordion label="This item is unavailable" disabled&gt;
     &lt;p&gt;You cannot open this.&lt;/p&gt;
 &lt;/x-accordion&gt;</code></pre>
-        <h4>Example</h4>
-        <x-accordion label="Why are jokes being taxed?">
-            <p>The king needed revenue and noticed people laughing too much for free.</p>
-        </x-accordion>
-        <x-accordion label="This item is currently unavailable" disabled>
-            <p>You cannot open this.</p>
-        </x-accordion>
-        <x-accordion label="Can I appeal my joke fine?">
-            <p>Appeals may be filed at the Bureau of Wit and Taxation.</p>
-        </x-accordion>
+        </div>
+        <div class="flex flex-col gap-1.5">
+            <span class="text-xs font-mono uppercase tracking-widest text-muted-foreground">Preview</span>
+            <div class="rounded-lg border border-border p-4">
+                <x-accordion label="Why are jokes being taxed?">
+                    <p>The king needed revenue and noticed people laughing too much for free.</p>
+                </x-accordion>
+                <x-accordion label="This item is currently unavailable" disabled>
+                    <p>You cannot open this.</p>
+                </x-accordion>
+                <x-accordion label="Can I appeal my joke fine?">
+                    <p>Appeals may be filed at the Bureau of Wit and Taxation.</p>
+                </x-accordion>
+            </div>
+        </div>
     </div>
 
     <hr>
-    <div class="flex flex-col gap-1">
+    <div class="flex flex-col gap-4">
         <h3>Accordion with card</h3>
-        <h4>Code</h4>
-        <pre><code>&lt;div class="card"&gt;
+        <div class="flex flex-col gap-1.5">
+            <span class="text-xs font-mono uppercase tracking-widest text-muted-foreground">Code</span>
+            <pre><code>&lt;div class="card"&gt;
     &lt;div class="header"&gt;
         &lt;h3&gt;FAQ about king tax on jokes&lt;/h3&gt;
     &lt;/div&gt;
@@ -84,40 +101,46 @@
         &lt;a href="#"&gt;Submit a formal inquiry&lt;/a&gt;
     &lt;/div&gt;
 &lt;/div&gt;</code></pre>
-        <h4>Example</h4>
-        <div class="card max-w-lg mx-auto">
-            <div class="header">
-                <h3>FAQ about king tax on jokes</h3>
-            </div>
-            <div class="content">
-                <x-accordion label="Why are jokes being taxed?">
-                    <p>The king needed revenue and noticed people laughing too much for free. A royal economist
-                        calculated that the average citizen laughed 47 times a day, which was deemed an untapped
-                        goldmine.</p>
-                </x-accordion>
-                <x-accordion label="How much does each joke cost?" disabled>
-                    <p>A simple pun is taxed at one copper coin. A full joke with setup and punchline costs three coins.
-                        Wordplay involving the royal family is subject to a luxury surcharge.</p>
-                </x-accordion>
-                <x-accordion label="Are knock-knock jokes exempt?">
-                    <p>No. Knock-knock jokes are actually double-taxed due to their repetitive nature and the kingdom's
-                        Anti-Redundancy in Humor Act of 1204.</p>
-                </x-accordion>
-                <x-accordion label="What happens if I laugh without paying?">
-                    <p>The Humorless Guard will issue you a Grimace Citation. Repeat offenders are sentenced to perform
-                        stand-up comedy for the king, who has not smiled since the Great Pun Famine.</p>
-                </x-accordion>
-                <x-accordion label="Can I buy a joke subscription?">
-                    <p>Yes. The Royal Bureau of Wit offers monthly plans starting at 50 coins, which covers unlimited
-                        puns, two slapstick incidents, and one satirical ballad per week.</p>
-                </x-accordion>
-            </div>
-            <div class="footer">
-                <p>Still have questions? Visit the Royal Bureau of Wit and Taxation, open weekdays except Jester's
-                    Holiday.</p>
-                <a href="#" aria-label="Submit a formal inquiry to the Royal Bureau of Wit and Taxation">Submit a formal inquiry</a>
+        </div>
+        <div class="flex flex-col gap-1.5">
+            <span class="text-xs font-mono uppercase tracking-widest text-muted-foreground">Preview</span>
+            <div class="rounded-lg border border-border p-4">
+                <div class="card max-w-lg mx-auto">
+                    <div class="header">
+                        <h3>FAQ about king tax on jokes</h3>
+                    </div>
+                    <div class="content">
+                        <x-accordion label="Why are jokes being taxed?">
+                            <p>The king needed revenue and noticed people laughing too much for free. A royal economist
+                                calculated that the average citizen laughed 47 times a day, which was deemed an untapped
+                                goldmine.</p>
+                        </x-accordion>
+                        <x-accordion label="How much does each joke cost?" disabled>
+                            <p>A simple pun is taxed at one copper coin. A full joke with setup and punchline costs three coins.
+                                Wordplay involving the royal family is subject to a luxury surcharge.</p>
+                        </x-accordion>
+                        <x-accordion label="Are knock-knock jokes exempt?">
+                            <p>No. Knock-knock jokes are actually double-taxed due to their repetitive nature and the kingdom's
+                                Anti-Redundancy in Humor Act of 1204.</p>
+                        </x-accordion>
+                        <x-accordion label="What happens if I laugh without paying?">
+                            <p>The Humorless Guard will issue you a Grimace Citation. Repeat offenders are sentenced to perform
+                                stand-up comedy for the king, who has not smiled since the Great Pun Famine.</p>
+                        </x-accordion>
+                        <x-accordion label="Can I buy a joke subscription?">
+                            <p>Yes. The Royal Bureau of Wit offers monthly plans starting at 50 coins, which covers unlimited
+                                puns, two slapstick incidents, and one satirical ballad per week.</p>
+                        </x-accordion>
+                    </div>
+                    <div class="footer">
+                        <p>Still have questions? Visit the Royal Bureau of Wit and Taxation, open weekdays except Jester's
+                            Holiday.</p>
+                        <a href="#" aria-label="Submit a formal inquiry to the Royal Bureau of Wit and Taxation">Submit a formal inquiry</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+
 </section>
 {% endblock %}

@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-<section class="p-4">
+<section class="p-4 flex flex-col gap-2">
     <h1>Typography</h1>
     <p>
         This section demonstrates the various heading levels and paragraph styles available in our design system. Use
@@ -9,71 +9,185 @@
     </p>
 
     <hr>
-    <h3>H1</h3>
-    <h1>Taxing Laughter: The Joke Tax Chronicles</h1>
+    <div class="flex flex-col gap-4">
+        <h3>H1</h3>
+        <div class="flex flex-col gap-1.5">
+            <span class="text-xs font-mono uppercase tracking-widest text-muted-foreground">Code</span>
+            <pre><code>&lt;h1&gt;Taxing Laughter: The Joke Tax Chronicles&lt;/h1&gt;</code></pre>
+        </div>
+        <div class="flex flex-col gap-1.5">
+            <span class="text-xs font-mono uppercase tracking-widest text-muted-foreground">Preview</span>
+            <div class="rounded-lg border border-border p-4">
+                <h1>Taxing Laughter: The Joke Tax Chronicles</h1>
+            </div>
+        </div>
+    </div>
 
     <hr>
-    <h3>H2</h3>
-    <h2>The People of the Kingdom</h2>
+    <div class="flex flex-col gap-4">
+        <h3>H2</h3>
+        <div class="flex flex-col gap-1.5">
+            <span class="text-xs font-mono uppercase tracking-widest text-muted-foreground">Code</span>
+            <pre><code>&lt;h2&gt;The People of the Kingdom&lt;/h2&gt;</code></pre>
+        </div>
+        <div class="flex flex-col gap-1.5">
+            <span class="text-xs font-mono uppercase tracking-widest text-muted-foreground">Preview</span>
+            <div class="rounded-lg border border-border p-4">
+                <h2>The People of the Kingdom</h2>
+            </div>
+        </div>
+    </div>
 
     <hr>
-    <h3>H3</h3>
-    <h3>The Joke Tax</h3>
+    <div class="flex flex-col gap-4">
+        <h3>H3</h3>
+        <div class="flex flex-col gap-1.5">
+            <span class="text-xs font-mono uppercase tracking-widest text-muted-foreground">Code</span>
+            <pre><code>&lt;h3&gt;The Joke Tax&lt;/h3&gt;</code></pre>
+        </div>
+        <div class="flex flex-col gap-1.5">
+            <span class="text-xs font-mono uppercase tracking-widest text-muted-foreground">Preview</span>
+            <div class="rounded-lg border border-border p-4">
+                <h3>The Joke Tax</h3>
+            </div>
+        </div>
+    </div>
 
     <hr>
-    <h3>H4</h3>
-    <h4>People stopped telling jokes</h4>
+    <div class="flex flex-col gap-4">
+        <h3>H4</h3>
+        <div class="flex flex-col gap-1.5">
+            <span class="text-xs font-mono uppercase tracking-widest text-muted-foreground">Code</span>
+            <pre><code>&lt;h4&gt;People stopped telling jokes&lt;/h4&gt;</code></pre>
+        </div>
+        <div class="flex flex-col gap-1.5">
+            <span class="text-xs font-mono uppercase tracking-widest text-muted-foreground">Preview</span>
+            <div class="rounded-lg border border-border p-4">
+                <h4>People stopped telling jokes</h4>
+            </div>
+        </div>
+    </div>
 
     <hr>
-    <h3>P</h3>
-    <p>
-        Once upon a time, the kingdom's treasury ran dry. The king, after much deliberation, decided to tax the one thing
-        his people loved most: laughter. Every joke told within the kingdom walls would henceforth carry a royal levy.
-    </p>
+    <div class="flex flex-col gap-4">
+        <h3>P</h3>
+        <div class="flex flex-col gap-1.5">
+            <span class="text-xs font-mono uppercase tracking-widest text-muted-foreground">Code</span>
+            <pre><code>&lt;p&gt;Once upon a time...&lt;/p&gt;</code></pre>
+        </div>
+        <div class="flex flex-col gap-1.5">
+            <span class="text-xs font-mono uppercase tracking-widest text-muted-foreground">Preview</span>
+            <div class="rounded-lg border border-border p-4">
+                <p>
+                    Once upon a time, the kingdom's treasury ran dry. The king, after much deliberation, decided to tax the one thing
+                    his people loved most: laughter. Every joke told within the kingdom walls would henceforth carry a royal levy.
+                </p>
+            </div>
+        </div>
+    </div>
 
     <hr>
-    <h3>Blockquote</h3>
-    <blockquote>
-        "Why should the jester laugh for free while the kingdom starves? A punchline is worth a penny, and a penny
-        funds the realm." — King Taxington III
-    </blockquote>
+    <div class="flex flex-col gap-4">
+        <h3>Blockquote</h3>
+        <div class="flex flex-col gap-1.5">
+            <span class="text-xs font-mono uppercase tracking-widest text-muted-foreground">Code</span>
+            <pre><code>&lt;blockquote&gt;Your quote here&lt;/blockquote&gt;</code></pre>
+        </div>
+        <div class="flex flex-col gap-1.5">
+            <span class="text-xs font-mono uppercase tracking-widest text-muted-foreground">Preview</span>
+            <div class="rounded-lg border border-border p-4">
+                <blockquote>
+                    "Why should the jester laugh for free while the kingdom starves? A punchline is worth a penny, and a penny
+                    funds the realm." — King Taxington III
+                </blockquote>
+            </div>
+        </div>
+    </div>
 
     <hr>
-    <h3>Small</h3>
-    <small>The king's decree was passed quietly at dawn.</small>
+    <div class="flex flex-col gap-4">
+        <h3>Small</h3>
+        <div class="flex flex-col gap-1.5">
+            <span class="text-xs font-mono uppercase tracking-widest text-muted-foreground">Code</span>
+            <pre><code>&lt;small&gt;The king's decree was passed quietly at dawn.&lt;/small&gt;</code></pre>
+        </div>
+        <div class="flex flex-col gap-1.5">
+            <span class="text-xs font-mono uppercase tracking-widest text-muted-foreground">Preview</span>
+            <div class="rounded-lg border border-border p-4">
+                <small>The king's decree was passed quietly at dawn.</small>
+            </div>
+        </div>
+    </div>
 
     <hr>
-    <h3>Code</h3>
-    <code>const tax = (jokes) => jokes * 0.25;</code>
+    <div class="flex flex-col gap-4">
+        <h3>Code</h3>
+        <div class="flex flex-col gap-1.5">
+            <span class="text-xs font-mono uppercase tracking-widest text-muted-foreground">Code</span>
+            <pre><code>&lt;code&gt;const tax = (jokes) =&gt; jokes * 0.25;&lt;/code&gt;</code></pre>
+        </div>
+        <div class="flex flex-col gap-1.5">
+            <span class="text-xs font-mono uppercase tracking-widest text-muted-foreground">Preview</span>
+            <div class="rounded-lg border border-border p-4">
+                <code>const tax = (jokes) => jokes * 0.25;</code>
+            </div>
+        </div>
+    </div>
 
     <hr>
-    <h3>Table</h3>
-    <table>
-        <thead>
-            <tr>
-                <th>King's Treasury</th>
-                <th>People's Happiness</th>
-                <th>Tax Rate</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Empty</td>
-                <td>Overflowing</td>
-                <td>0%</td>
-            </tr>
-            <tr>
-                <td>Modest</td>
-                <td>Satisfied</td>
-                <td>10%</td>
-            </tr>
-            <tr>
-                <td>Full</td>
-                <td>Unhappy</td>
-                <td>25%</td>
-            </tr>
-        </tbody>
-    </table>
+    <div class="flex flex-col gap-4">
+        <h3>Table</h3>
+        <div class="flex flex-col gap-1.5">
+            <span class="text-xs font-mono uppercase tracking-widest text-muted-foreground">Code</span>
+            <pre><code>&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;King's Treasury&lt;/th&gt;
+      &lt;th&gt;People's Happiness&lt;/th&gt;
+      &lt;th&gt;Tax Rate&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Empty&lt;/td&gt;
+      &lt;td&gt;Overflowing&lt;/td&gt;
+      &lt;td&gt;0%&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+        </div>
+        <div class="flex flex-col gap-1.5">
+            <span class="text-xs font-mono uppercase tracking-widest text-muted-foreground">Preview</span>
+            <div class="rounded-lg border border-border p-4">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>King's Treasury</th>
+                            <th>People's Happiness</th>
+                            <th>Tax Rate</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Empty</td>
+                            <td>Overflowing</td>
+                            <td>0%</td>
+                        </tr>
+                        <tr>
+                            <td>Modest</td>
+                            <td>Satisfied</td>
+                            <td>10%</td>
+                        </tr>
+                        <tr>
+                            <td>Full</td>
+                            <td>Unhappy</td>
+                            <td>25%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 
 </section>
 
