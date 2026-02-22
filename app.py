@@ -16,6 +16,16 @@ elements: List[Element] = [
         description="A simple accordion component using the <details> element.",
         link="/accordion",
     ),
+    Element(
+        name="Alert",
+        description="A callout component for user attention with info, success, destructive, and warning variants.",
+        link="/alert",
+    ),
+    Element(
+        name="Avatar",
+        description="Displays a user avatar with an image or initials fallback, with a group variant for stacking.",
+        link="/avatar",
+    ),
 ]
 
 

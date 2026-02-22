@@ -4,10 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello World!</title>
+    <title>{% block title %}{% endblock %}</title>
     <link rel="stylesheet" href={{ url_for('static', filename='css/output.css' ) }}>
-    <script src={{ url_for('static', filename='js/accordion.js') }} defer></script>
-
+ 
     <!-- <script src="https://unpkg.com/htmx.org@2.0.4"></script>
     <script src="https://unpkg.com/htmx.org/dist/ext/json-enc.js"></script>
     <script src="//unpkg.com/alpinejs" defer></script>
@@ -18,10 +17,15 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet"> -->
-
+    {% block head %}{% endblock %}
 </head>
 
 <body class="bg-background text-foreground dark flex">
+    <template id="icon-info">{% include "icons/info.html" %}</template>
+    <template id="icon-success">{% include "icons/success.html" %}</template>
+    <template id="icon-destructive">{% include "icons/destructive.html" %}</template>
+    <template id="icon-warning">{% include "icons/warning.html" %}</template>
+    <template id="icon-cross">{% include "icons/cross.html" %}</template>
     {% include "partials/sidebar.html" %}
     <div class="flex-1 overflow-auto h-screen">
         {% block content %}{% endblock %}

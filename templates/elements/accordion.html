@@ -1,5 +1,13 @@
 {% extends "base.html" %}
 
+{% block title %}
+   Accordion
+{% endblock %}
+
+{% block head %}
+    <script src={{ url_for('static', filename='js/accordion.js') }} defer></script>
+{% endblock %}
+
 {% block content %}
 <section class="p-4 flex flex-col gap-2">
     <h1>Accordion</h1>

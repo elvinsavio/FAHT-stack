@@ -26,6 +26,7 @@
   --color-chart-3: hsl(197 37% 24%);
   --color-chart-4: hsl(43 74% 66%);
   --color-chart-5: hsl(27 87% 67%);
+  --color-warning: hsl(38 92% 50%);
   --radius: 0.3rem;
 }
 
@@ -55,6 +56,8 @@
     --color-chart-3: hsl(30 80% 55%);
     --color-chart-4: hsl(280 65% 60%);
     --color-chart-5: hsl(340 75% 55%);
+    --color-info: hsl(214 100% 72%);
+    --color-warning: hsl(38 92% 62%);
   }
 }
 

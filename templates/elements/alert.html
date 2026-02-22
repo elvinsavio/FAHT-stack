@@ -1,0 +1,124 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Alert
+{% endblock %}
+
+{% block head %}
+    <script src={{ url_for('static', filename='js/alert.js') }} defer></script>
+{% endblock %}
+
+{% block content %}
+<section class="p-4 flex flex-col gap-2">
+    <h1>Alert</h1>
+    <p>
+        Displays a callout for user attention. Use alerts to communicate status, warnings, errors, or
+        informational messages in a compact and clear format.
+    </p>
+
+    <hr>
+    <div class="flex flex-col gap-4">
+        <h3>Info <small>(default)</small></h3>
+        <div class="flex flex-col gap-1.5">
+            <span class="text-xs font-mono uppercase tracking-widest text-muted-foreground">Code</span>
+            <pre><code>&lt;x-alert title="Royal Decree" variant="info"&gt;
+    All jokes told within the kingdom are now subject to taxation.
+&lt;/x-alert&gt;</code></pre>
+        </div>
+        <div class="flex flex-col gap-1.5">
+            <span class="text-xs font-mono uppercase tracking-widest text-muted-foreground">Preview</span>
+            <div class="rounded-lg border border-border p-4">
+                <x-alert title="Royal Decree" variant="info">
+                    All jokes told within the kingdom are now subject to taxation.
+                </x-alert>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+    <div class="flex flex-col gap-4">
+        <h3>Success</h3>
+        <div class="flex flex-col gap-1.5">
+            <span class="text-xs font-mono uppercase tracking-widest text-muted-foreground">Code</span>
+            <pre><code>&lt;x-alert title="Tax paid!" variant="success"&gt;
+    Your joke levy of 3 copper coins has been received. You may laugh freely.
+&lt;/x-alert&gt;</code></pre>
+        </div>
+        <div class="flex flex-col gap-1.5">
+            <span class="text-xs font-mono uppercase tracking-widest text-muted-foreground">Preview</span>
+            <div class="rounded-lg border border-border p-4">
+                <x-alert title="Tax paid!" variant="success">
+                    Your joke levy of 3 copper coins has been received. You may laugh freely.
+                </x-alert>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+    <div class="flex flex-col gap-4">
+        <h3>Destructive</h3>
+        <div class="flex flex-col gap-1.5">
+            <span class="text-xs font-mono uppercase tracking-widest text-muted-foreground">Code</span>
+            <pre><code>&lt;x-alert title="Tax evasion detected" variant="destructive"&gt;
+    An unlicensed punchline was reported. The Humorless Guard has been dispatched.
+&lt;/x-alert&gt;</code></pre>
+        </div>
+        <div class="flex flex-col gap-1.5">
+            <span class="text-xs font-mono uppercase tracking-widest text-muted-foreground">Preview</span>
+            <div class="rounded-lg border border-border p-4">
+                <x-alert title="Tax evasion detected" variant="destructive">
+                    An unlicensed punchline was reported. The Humorless Guard has been dispatched.
+                </x-alert>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+    <div class="flex flex-col gap-4">
+        <h3>Warning</h3>
+        <div class="flex flex-col gap-1.5">
+            <span class="text-xs font-mono uppercase tracking-widest text-muted-foreground">Code</span>
+            <pre><code>&lt;x-alert title="Unregistered jest detected" variant="warning"&gt;
+    You have 24 hours to file a retroactive joke declaration or face a Grimace Citation.
+&lt;/x-alert&gt;</code></pre>
+        </div>
+        <div class="flex flex-col gap-1.5">
+            <span class="text-xs font-mono uppercase tracking-widest text-muted-foreground">Preview</span>
+            <div class="rounded-lg border border-border p-4">
+                <x-alert title="Unregistered jest detected" variant="warning">
+                    You have 24 hours to file a retroactive joke declaration or face a Grimace Citation.
+                </x-alert>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+    <div class="flex flex-col gap-4">
+        <h3>Closable</h3>
+        <div class="flex flex-col gap-1.5">
+            <span class="text-xs font-mono uppercase tracking-widest text-muted-foreground">Code</span>
+            <pre><code>&lt;x-alert title="Royal Decree" variant="info" closable&gt;
+    All jokes told within the kingdom are now subject to taxation.
+&lt;/x-alert&gt;</code></pre>
+        </div>
+        <div class="flex flex-col gap-1.5">
+            <span class="text-xs font-mono uppercase tracking-widest text-muted-foreground">Preview</span>
+            <div class="rounded-lg border border-border p-4 flex flex-col gap-2">
+                <x-alert title="Royal Decree" variant="info" closable>
+                    All jokes told within the kingdom are now subject to taxation.
+                </x-alert>
+                <x-alert title="Tax paid!" variant="success" closable>
+                    Your joke levy of 3 copper coins has been received. You may laugh freely.
+                </x-alert>
+                <x-alert title="Tax evasion detected" variant="destructive" closable>
+                    An unlicensed punchline was reported. The Humorless Guard has been dispatched.
+                </x-alert>
+                <x-alert title="Unregistered jest detected" variant="warning" closable>
+                    You have 24 hours to file a retroactive joke declaration or face a Grimace Citation.
+                </x-alert>
+            </div>
+        </div>
+    </div>
+
+</section>
+{% endblock %}
