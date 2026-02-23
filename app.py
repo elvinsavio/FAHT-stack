@@ -26,6 +26,11 @@ elements: List[Element] = [
         description="Displays a user avatar with an image or initials fallback, with a group variant for stacking.",
         link="/avatar",
     ),
+    Element(
+        name="Badge",
+        description="Small status and label indicators with info, secondary, destructive, and outline variants.",
+        link="/badge",
+    ),
 ]
 
 

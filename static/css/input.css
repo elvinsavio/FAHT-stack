@@ -182,6 +182,29 @@ details {
 }
 
 
+/* badge */
+
+.badge {
+  @apply inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold;
+}
+
+.badge-info {
+  @apply border-border bg-muted text-muted-foreground;
+}
+
+.badge-secondary {
+  @apply border-transparent bg-secondary text-secondary-foreground;
+}
+
+.badge-destructive {
+  @apply border-destructive bg-destructive text-destructive-foreground;
+}
+
+.badge-outline {
+  @apply border-border bg-transparent text-foreground;
+}
+
+
 /* card */
 
 .card {
