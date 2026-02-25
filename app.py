@@ -12,33 +12,13 @@ elements: List[Element] = [
         link="/typography",
     ),
     Element(
-        name="Accordion",
-        description="A simple accordion component using the <details> element.",
-        link="/accordion",
-    ),
-    Element(
-        name="Alert",
-        description="A callout component for user attention with info, success, destructive, and warning variants.",
-        link="/alert",
-    ),
-    Element(
-        name="Avatar",
-        description="Displays a user avatar with an image or initials fallback, with a group variant for stacking.",
-        link="/avatar",
-    ),
-    Element(
-        name="Badge",
-        description="Small status and label indicators with info, secondary, destructive, and outline variants.",
-        link="/badge",
-    ),
-    Element(
-        name="Breadcrumbs",
-        description="A navigation trail showing the user's current location within a page hierarchy.",
-        link="/breadcrumbs",
+        name="Links",
+        description="A collection of link styles and components.",
+        link="/links",
     ),
     Element(
         name="Button",
-        description="Interactive button with default, outline, destructive, ghost, secondary, and link variants.",
+        description="A collection of button variants and sizes.",
         link="/button",
     ),
 ]

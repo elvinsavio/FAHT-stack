@@ -96,7 +96,7 @@ blockquote {
 }
 
 table {
-  @apply w-full;
+  @apply w-full my-4 border-collapse text-left;
 
 
   thead {
@@ -104,7 +104,7 @@ table {
       @apply even:bg-muted m-0 border-t p-0;
 
       th {
-        @apply border px-4 py-2 text-left font-bold [&[align=center]]:text-center [&[align=right]]:text-right
+        @apply border  border-border px-4 py-2 text-left font-bold [&[align=center]]:text-center [&[align=right]]:text-right
       }
     }
   }
@@ -114,7 +114,7 @@ table {
       @apply even:bg-muted m-0 border-t p-0;
 
       td {
-        @apply border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right
+        @apply border border-border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right
       }
     }
   }
@@ -180,3 +180,39 @@ details {
 }
 
 
+a {
+  @apply hover:underline underline-offset-2;
+
+  &.btn {
+    @apply inline-flex items-center justify-center rounded px-4 py-2 gap-1 text-sm font-medium no-underline bg-secondary text-secondary-foreground transition-colors duration-150 hover:no-underline hover:bg-secondary/80 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring;
+  }
+}
+
+
+/* button */
+button {
+  @apply inline-flex items-center justify-center gap-1.5 rounded text-sm font-medium transition-colors duration-150 cursor-pointer;
+  @apply px-4 py-2;
+  @apply focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring;
+  @apply bg-secondary text-secondary-foreground hover:bg-secondary/80;
+
+  &[data-variant="outline"] {
+    @apply border border-border bg-transparent text-foreground hover:bg-accent hover:text-accent-foreground;
+  }
+
+  &[data-variant="ghost"] {
+    @apply bg-transparent text-foreground hover:bg-accent hover:text-accent-foreground;
+  }
+
+  &[data-variant="destructive"] {
+    @apply bg-destructive text-destructive-foreground hover:bg-destructive/90;
+  }
+
+  &[data-size="sm"] {
+    @apply px-3 py-1.5 text-xs;
+  }
+
+  &[data-size="lg"] {
+    @apply px-6 py-2.5 text-base;
+  }
+}
