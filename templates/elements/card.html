@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+
+{% block title %}Card{% endblock %}
+
+{% block head %}
+    <script src={{ url_for('static', filename='js/card.js') }} defer></script>
+{% endblock %}
+
+{% block content %}
+<section class="p-4 flex flex-col gap-2">
+    <h1>Card</h1>
+    <p>
+        A surface container for grouped content. Supports optional <code>x-card-header</code>, <code>x-card-content</code>,
+        and <code>x-card-footer</code> sections. Can include text, images, or any combination.
+    </p>
+
+    <hr>
+    <div class="flex flex-col gap-4">
+        <h3>Text</h3>
+        <div class="flex flex-col gap-1.5">
+            <span class="text-xs font-mono uppercase tracking-widest text-muted-foreground">Code</span>
+            <pre><code>&lt;x-card&gt;
+  &lt;x-card-header&gt;
+    &lt;strong&gt;Royal Proclamation&lt;/strong&gt;
+  &lt;/x-card-header&gt;
+  &lt;x-card-content&gt;
+    &lt;p&gt;Let it be known throughout the realm...&lt;/p&gt;
+  &lt;/x-card-content&gt;
+  &lt;x-card-footer&gt;Issued by the Crown, Year of Our Realm 2026&lt;/x-card-footer&gt;
+&lt;/x-card&gt;</code></pre>
+        </div>
+        <div class="flex flex-col gap-1.5">
+            <span class="text-xs font-mono uppercase tracking-widest text-muted-foreground">Preview</span>
+            <div class="rounded-lg border border-border p-4 flex justify-center">
+                <x-card class="max-w-80">
+                    <x-card-header>
+                        <strong>Royal Proclamation</strong>
+                    </x-card-header>
+                    <x-card-content>
+                        <p>Let it be known throughout the realm that henceforth all citizens shall enjoy the fruits of peace and prosperity under the gracious rule of the sovereign.</p>
+                    </x-card-content>
+                    <x-card-footer>Issued by the Crown, Year of Our Realm 2026</x-card-footer>
+                </x-card>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+    <div class="flex flex-col gap-4">
+        <h3>With Image</h3>
+        <div class="flex flex-col gap-1.5">
+            <span class="text-xs font-mono uppercase tracking-widest text-muted-foreground">Code</span>
+            <pre><code>&lt;x-card&gt;
+  &lt;img src="..." alt="..." class="w-full object-cover h-40"&gt;
+  &lt;x-card-header&gt;
+    &lt;strong&gt;The Grand Citadel&lt;/strong&gt;
+  &lt;/x-card-header&gt;
+  &lt;x-card-content&gt;
+    &lt;p&gt;Seat of power since the first age...&lt;/p&gt;
+  &lt;/x-card-content&gt;
+  &lt;x-card-footer&gt;Landmark &amp;middot; Est. 843&lt;/x-card-footer&gt;
+&lt;/x-card&gt;</code></pre>
+        </div>
+        <div class="flex flex-col gap-1.5">
+            <span class="text-xs font-mono uppercase tracking-widest text-muted-foreground">Preview</span>
+            <div class="rounded-lg border border-border p-4 flex justify-center">
+                <x-card class="max-w-80">
+                    <img src="https://picsum.photos/seed/citadel/400/160" alt="The Grand Citadel" class="w-full object-cover h-40">
+                    <x-card-header>
+                        <strong>The Grand Citadel</strong>
+                    </x-card-header>
+                    <x-card-content>
+                        <p>Seat of power since the first age, the citadel stands as an enduring monument to the realm's strength and wisdom.</p>
+                    </x-card-content>
+                    <x-card-footer>Landmark &middot; Est. 843</x-card-footer>
+                </x-card>
+            </div>
+        </div>
+    </div>
+
+</section>
+{% endblock %}

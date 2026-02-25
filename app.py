@@ -41,6 +41,11 @@ elements: List[Element] = [
         description="Interactive button with default, outline, destructive, ghost, secondary, and link variants.",
         link="/button",
     ),
+    Element(
+        name="Card",
+        description="A surface container for grouped content with optional header, content, and footer sections.",
+        link="/card",
+    ),
 ]
 
 
