@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+
+{% block title %}Input{% endblock %}
+
+{% block content %}
+<section class="p-4 flex flex-col gap-2">
+    <h1>Input</h1>
+    <p>
+        Native HTML inputs styled with CSS. No JavaScript required.
+    </p>
+
+    <hr>
+    <div class="flex flex-col gap-4">
+        <h3>Default</h3>
+        <div class="flex flex-col gap-1.5">
+            <span class="text-xs font-mono uppercase tracking-widest text-muted-foreground">Code</span>
+            <pre><code>&lt;input type="text" /&gt;</code></pre>
+        </div>
+        <div class="flex flex-col gap-1.5">
+            <span class="text-xs font-mono uppercase tracking-widest text-muted-foreground">Preview</span>
+            <div class="rounded-lg border border-border p-4">
+                <input type="text" />
+            </div>
+        </div>
+    </div>
+
+    <hr>
+    <div class="flex flex-col gap-4">
+        <h3>Placeholder</h3>
+        <div class="flex flex-col gap-1.5">
+            <span class="text-xs font-mono uppercase tracking-widest text-muted-foreground">Code</span>
+            <pre><code>&lt;input type="text" placeholder="Enter your joke here..." /&gt;</code></pre>
+        </div>
+        <div class="flex flex-col gap-1.5">
+            <span class="text-xs font-mono uppercase tracking-widest text-muted-foreground">Preview</span>
+            <div class="rounded-lg border border-border p-4">
+                <input type="text" placeholder="Enter your joke here..." />
+            </div>
+        </div>
+    </div>
+
+    <hr>
+    <div class="flex flex-col gap-4">
+        <h3>With Label</h3>
+        <div class="flex flex-col gap-1.5">
+            <span class="text-xs font-mono uppercase tracking-widest text-muted-foreground">Code</span>
+            <pre><code>&lt;label for="joke"&gt;Your joke&lt;/label&gt;
+&lt;input type="text" id="joke" placeholder="Why did the jester..." /&gt;</code></pre>
+        </div>
+        <div class="flex flex-col gap-1.5">
+            <span class="text-xs font-mono uppercase tracking-widest text-muted-foreground">Preview</span>
+            <div class="rounded-lg border border-border p-4 flex flex-col gap-1.5">
+                <label for="joke">Your joke</label>
+                <input type="text" id="joke" placeholder="Why did the jester cross the road..." />
+            </div>
+        </div>
+    </div>
+
+    <hr>
+    <div class="flex flex-col gap-4">
+        <h3>Disabled</h3>
+        <div class="flex flex-col gap-1.5">
+            <span class="text-xs font-mono uppercase tracking-widest text-muted-foreground">Code</span>
+            <pre><code>&lt;input type="text" disabled value="Taxed into silence" /&gt;</code></pre>
+        </div>
+        <div class="flex flex-col gap-1.5">
+            <span class="text-xs font-mono uppercase tracking-widest text-muted-foreground">Preview</span>
+            <div class="rounded-lg border border-border p-4">
+                <input type="text" disabled value="Taxed into silence" />
+            </div>
+        </div>
+    </div>
+
+    <hr>
+    <div class="flex flex-col gap-4">
+        <h3>Types</h3>
+        <div class="flex flex-col gap-1.5">
+            <span class="text-xs font-mono uppercase tracking-widest text-muted-foreground">Code</span>
+            <pre><code>&lt;input type="email" placeholder="jester@kingdom.com" /&gt;
+&lt;input type="password" placeholder="Royal vault password" /&gt;
+&lt;input type="number" placeholder="Number of jokes" /&gt;
+&lt;input type="search" placeholder="Search the royal archives..." /&gt;</code></pre>
+        </div>
+        <div class="flex flex-col gap-1.5">
+            <span class="text-xs font-mono uppercase tracking-widest text-muted-foreground">Preview</span>
+            <div class="rounded-lg border border-border p-4 flex flex-col gap-3">
+                <input type="email" placeholder="jester@kingdom.com" />
+                <input type="password" placeholder="Royal vault password" />
+                <input type="number" placeholder="Number of jokes" />
+                <input type="search" placeholder="Search the royal archives..." />
+            </div>
+        </div>
+    </div>
+
+</section>
+{% endblock %}

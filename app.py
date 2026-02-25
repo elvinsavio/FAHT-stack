@@ -26,6 +26,21 @@ elements: List[Element] = [
         description="Collapsible sections using native details and summary elements.",
         link="/accordion",
     ),
+    Element(
+        name="Dialog",
+        description="Modal dialogs using the native dialog element with variant styles.",
+        link="/dialog",
+    ),
+    Element(
+        name="Input",
+        description="Native HTML inputs styled with CSS, no JavaScript.",
+        link="/input",
+    ),
+    Element(
+        name="Form",
+        description="Form layouts combining inputs, labels, and buttons.",
+        link="/form",
+    ),
 ]
 
 

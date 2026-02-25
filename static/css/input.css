@@ -27,6 +27,7 @@
   --color-chart-4: hsl(43 74% 66%);
   --color-chart-5: hsl(27 87% 67%);
   --color-warning: hsl(38 92% 50%);
+  --color-info: hsl(214 100% 50%);
   --radius: 0.3rem;
 }
 
@@ -176,6 +177,39 @@ details {
     summary {
       @apply cursor-not-allowed pointer-events-none;
     }
+  }
+}
+
+
+/* input */
+label {
+  @apply text-sm font-medium text-muted-foreground;
+}
+
+input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="color"]):not([type="file"]) {
+  @apply flex w-full rounded border border-input bg-background px-3 py-2 text-sm text-foreground;
+  @apply placeholder:text-muted-foreground;
+  @apply focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring;
+  @apply disabled:cursor-not-allowed disabled:opacity-50;
+}
+
+
+/* dialog */
+dialog {
+  @apply rounded-lg border border-border bg-card text-card-foreground shadow-xl w-full max-w-md p-0 m-auto;
+
+  &::backdrop {
+    @apply bg-black/50;
+  }
+
+  &[data-variant="warning"] {
+    @apply border-warning;
+    .dialog-icon { @apply text-warning; }
+  }
+
+  &[data-variant="error"] {
+    @apply border-destructive;
+    .dialog-icon { @apply text-destructive; }
   }
 }
 

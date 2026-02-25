@@ -1,0 +1,149 @@
+{% extends "base.html" %}
+
+{% block title %}Dialog{% endblock %}
+
+{% block content %}
+<section class="p-4 flex flex-col gap-2">
+    <h1>Dialog</h1>
+    <p>
+        Dialog uses the native <code>&lt;dialog&gt;</code> element. Use <code>command</code> and <code>commandfor</code> attributes to open and close without JavaScript. Use <code>data-variant</code> for intent styles.
+    </p>
+
+    <hr>
+    <div class="flex flex-col gap-4">
+        <h3>Info</h3>
+        <div class="flex flex-col gap-1.5">
+            <span class="text-xs font-mono uppercase tracking-widest text-muted-foreground">Code</span>
+            <pre><code>&lt;button command="show-modal" commandfor="dialog-info"&gt;
+  {% raw %}{% include "icons/info.html" %}{% endraw %}
+  New Royal Decree
+&lt;/button&gt;
+
+&lt;dialog id="dialog-info" data-variant="info"&gt;
+  &lt;span class="dialog-icon"&gt;{% raw %}{% include "icons/info.html" %}{% endraw %}&lt;/span&gt;
+  &lt;h4&gt;New Joke Tax Decree&lt;/h4&gt;
+  &lt;p&gt;...&lt;/p&gt;
+  &lt;button command="close" commandfor="dialog-info"&gt;Acknowledge&lt;/button&gt;
+&lt;/dialog&gt;</code></pre>
+        </div>
+        <div class="flex flex-col gap-1.5">
+            <span class="text-xs font-mono uppercase tracking-widest text-muted-foreground">Preview</span>
+            <div class="rounded-lg border border-border p-4">
+                <button command="show-modal" commandfor="dialog-info">
+                    {% include "icons/info.html" %}
+                    New Royal Decree
+                </button>
+
+                <dialog id="dialog-info" data-variant="info">
+                    <div class="flex flex-col gap-4 p-6">
+                        <div class="flex items-start gap-3">
+                            <span class="dialog-icon shrink-0">{% include "icons/info.html" %}</span>
+                            <div>
+                                <h4>New Joke Tax Decree</h4>
+                                <p class="text-sm text-muted-foreground mt-1">
+                                    Effective immediately, all knock-knock jokes require a pre-registration with the Royal Bureau of Wit. Failure to register may result in a fine of up to three copper coins.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex justify-end gap-2">
+                            <button command="close" commandfor="dialog-info" data-variant="outline">Dismiss</button>
+                            <button command="close" commandfor="dialog-info">Acknowledge</button>
+                        </div>
+                    </div>
+                </dialog>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+    <div class="flex flex-col gap-4">
+        <h3>Warning</h3>
+        <div class="flex flex-col gap-1.5">
+            <span class="text-xs font-mono uppercase tracking-widest text-muted-foreground">Code</span>
+            <pre><code>&lt;button command="show-modal" commandfor="dialog-warning"&gt;
+  {% raw %}{% include "icons/warning.html" %}{% endraw %}
+  Tax Overdue
+&lt;/button&gt;
+
+&lt;dialog id="dialog-warning" data-variant="warning"&gt;
+  &lt;span class="dialog-icon"&gt;{% raw %}{% include "icons/warning.html" %}{% endraw %}&lt;/span&gt;
+  &lt;h4&gt;Joke Tax Overdue&lt;/h4&gt;
+  &lt;p&gt;...&lt;/p&gt;
+  &lt;button command="close" commandfor="dialog-warning"&gt;Pay Now&lt;/button&gt;
+&lt;/dialog&gt;</code></pre>
+        </div>
+        <div class="flex flex-col gap-1.5">
+            <span class="text-xs font-mono uppercase tracking-widest text-muted-foreground">Preview</span>
+            <div class="rounded-lg border border-border p-4">
+                <button command="show-modal" commandfor="dialog-warning">
+                    {% include "icons/warning.html" %}
+                    Tax Overdue
+                </button>
+
+                <dialog id="dialog-warning" data-variant="warning">
+                    <div class="flex flex-col gap-4 p-6">
+                        <div class="flex items-start gap-3">
+                            <span class="dialog-icon shrink-0">{% include "icons/warning.html" %}</span>
+                            <div>
+                                <h4>Joke Tax Overdue</h4>
+                                <p class="text-sm text-muted-foreground mt-1">
+                                    Your joke tax balance is 14 days overdue. The Royal Collector will visit your dwelling if payment is not received by sundown. Interest accrues at one pun per day.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex justify-end gap-2">
+                            <button command="close" commandfor="dialog-warning" data-variant="outline">Remind Me Later</button>
+                            <button command="close" commandfor="dialog-warning">Pay Now</button>
+                        </div>
+                    </div>
+                </dialog>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+    <div class="flex flex-col gap-4">
+        <h3>Error</h3>
+        <div class="flex flex-col gap-1.5">
+            <span class="text-xs font-mono uppercase tracking-widest text-muted-foreground">Code</span>
+            <pre><code>&lt;button command="show-modal" commandfor="dialog-error" data-variant="destructive"&gt;
+  Illegal Punchline
+&lt;/button&gt;
+
+&lt;dialog id="dialog-error" data-variant="error"&gt;
+  &lt;span class="dialog-icon"&gt;{% raw %}{% include "icons/destructive.html" %}{% endraw %}&lt;/span&gt;
+  &lt;h4&gt;Illegal Punchline Detected&lt;/h4&gt;
+  &lt;p&gt;...&lt;/p&gt;
+  &lt;button command="close" commandfor="dialog-error" data-variant="destructive"&gt;Accept Penalty&lt;/button&gt;
+&lt;/dialog&gt;</code></pre>
+        </div>
+        <div class="flex flex-col gap-1.5">
+            <span class="text-xs font-mono uppercase tracking-widest text-muted-foreground">Preview</span>
+            <div class="rounded-lg border border-border p-4">
+                <button command="show-modal" commandfor="dialog-error" data-variant="destructive">
+                    Illegal Punchline
+                </button>
+
+                <dialog id="dialog-error" data-variant="error">
+                    <div class="flex flex-col gap-4 p-6">
+                        <div class="flex items-start gap-3">
+                            <span class="dialog-icon shrink-0">{% include "icons/destructive.html" %}</span>
+                            <div>
+                                <h4>Illegal Punchline Detected</h4>
+                                <p class="text-sm text-muted-foreground mt-1">
+                                    The joke you attempted to tell has been flagged by the Royal Wit Enforcement Agency. Banned punchlines include anything referencing the king's hairpiece. Your jester licence has been suspended pending review.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex justify-end gap-2">
+                            <button command="close" commandfor="dialog-error" data-variant="outline">Appeal</button>
+                            <button command="close" commandfor="dialog-error" data-variant="destructive">Accept Penalty</button>
+                        </div>
+                    </div>
+                </dialog>
+            </div>
+        </div>
+    </div>
+
+</section>
+{% endblock %}

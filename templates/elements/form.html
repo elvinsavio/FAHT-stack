@@ -1,0 +1,124 @@
+{% extends "base.html" %}
+
+{% block title %}Form{% endblock %}
+
+{% block content %}
+<section class="p-4 flex flex-col gap-2">
+    <h1>Form</h1>
+    <p>
+        Forms combine inputs, labels, and buttons. Styled with CSS, no JavaScript.
+    </p>
+
+    <hr>
+    <div class="flex flex-col gap-3">
+        <h3>Simple</h3>
+        <div class="flex flex-col gap-1">
+            <span class="text-xs font-mono uppercase tracking-widest text-muted-foreground">Code</span>
+            <pre><code>&lt;form class="flex flex-col gap-3"&gt;
+  &lt;div class="flex flex-col gap-1"&gt;
+    &lt;label for="name"&gt;Name&lt;/label&gt;
+    &lt;input type="text" id="name" placeholder="Your name" /&gt;
+  &lt;/div&gt;
+  &lt;button type="submit"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+        </div>
+        <div class="flex flex-col gap-1">
+            <span class="text-xs font-mono uppercase tracking-widest text-muted-foreground">Preview</span>
+            <div class="rounded-lg border border-border p-4">
+                <form class="flex flex-col gap-3">
+                    <div class="flex flex-col gap-1">
+                        <label for="simple-name">Name</label>
+                        <input type="text" id="simple-name" placeholder="Your name" />
+                    </div>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+    <div class="flex flex-col gap-3">
+        <h3>Joke Tax Registration</h3>
+        <div class="flex flex-col gap-1">
+            <span class="text-xs font-mono uppercase tracking-widest text-muted-foreground">Code</span>
+            <pre><code>&lt;form class="flex flex-col gap-3"&gt;
+  &lt;div class="flex flex-col gap-1"&gt;
+    &lt;label for="jester-name"&gt;Jester Name&lt;/label&gt;
+    &lt;input type="text" id="jester-name" placeholder="e.g. Sir Laughsalot" /&gt;
+  &lt;/div&gt;
+  &lt;div class="flex flex-col gap-1"&gt;
+    &lt;label for="email"&gt;Email&lt;/label&gt;
+    &lt;input type="email" id="email" placeholder="jester@kingdom.com" /&gt;
+  &lt;/div&gt;
+  &lt;div class="flex flex-col gap-1"&gt;
+    &lt;label for="jokes"&gt;Jokes per day&lt;/label&gt;
+    &lt;input type="number" id="jokes" placeholder="0" /&gt;
+  &lt;/div&gt;
+  &lt;div class="flex gap-2 justify-end"&gt;
+    &lt;button type="reset" data-variant="outline"&gt;Reset&lt;/button&gt;
+    &lt;button type="submit"&gt;Register&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+        </div>
+        <div class="flex flex-col gap-1">
+            <span class="text-xs font-mono uppercase tracking-widest text-muted-foreground">Preview</span>
+            <div class="rounded-lg border border-border p-4">
+                <form class="flex flex-col gap-3">
+                    <div class="flex flex-col gap-1">
+                        <label for="jester-name">Jester Name</label>
+                        <input type="text" id="jester-name" placeholder="e.g. Sir Laughsalot" />
+                    </div>
+                    <div class="flex flex-col gap-1">
+                        <label for="jester-email">Email</label>
+                        <input type="email" id="jester-email" placeholder="jester@kingdom.com" />
+                    </div>
+                    <div class="flex flex-col gap-1">
+                        <label for="jokes-per-day">Jokes per day</label>
+                        <input type="number" id="jokes-per-day" placeholder="0" />
+                    </div>
+                    <div class="flex gap-2 justify-end">
+                        <button type="reset" data-variant="outline">Reset</button>
+                        <button type="submit">Register</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+    <div class="flex flex-col gap-3">
+        <h3>Login</h3>
+        <div class="flex flex-col gap-1">
+            <span class="text-xs font-mono uppercase tracking-widest text-muted-foreground">Code</span>
+            <pre><code>&lt;form class="flex flex-col gap-3"&gt;
+  &lt;div class="flex flex-col gap-1"&gt;
+    &lt;label for="username"&gt;Username&lt;/label&gt;
+    &lt;input type="text" id="username" placeholder="Royal username" /&gt;
+  &lt;/div&gt;
+  &lt;div class="flex flex-col gap-1"&gt;
+    &lt;label for="password"&gt;Password&lt;/label&gt;
+    &lt;input type="password" id="password" placeholder="••••••••" /&gt;
+  &lt;/div&gt;
+  &lt;button type="submit"&gt;Sign in&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+        </div>
+        <div class="flex flex-col gap-1">
+            <span class="text-xs font-mono uppercase tracking-widest text-muted-foreground">Preview</span>
+            <div class="rounded-lg border border-border p-4">
+                <form class="flex flex-col gap-3">
+                    <div class="flex flex-col gap-1">
+                        <label for="login-username">Username</label>
+                        <input type="text" id="login-username" placeholder="Royal username" />
+                    </div>
+                    <div class="flex flex-col gap-1">
+                        <label for="login-password">Password</label>
+                        <input type="password" id="login-password" placeholder="••••••••" />
+                    </div>
+                    <button type="submit">Sign in</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</section>
+{% endblock %}
