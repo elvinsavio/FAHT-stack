@@ -31,6 +31,16 @@ elements: List[Element] = [
         description="Small status and label indicators with info, secondary, destructive, and outline variants.",
         link="/badge",
     ),
+    Element(
+        name="Breadcrumbs",
+        description="A navigation trail showing the user's current location within a page hierarchy.",
+        link="/breadcrumbs",
+    ),
+    Element(
+        name="Button",
+        description="Interactive button with default, outline, destructive, ghost, secondary, and link variants.",
+        link="/button",
+    ),
 ]
 
 

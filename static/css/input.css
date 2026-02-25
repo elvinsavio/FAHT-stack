@@ -134,8 +134,6 @@ small {
 
 
 /* accordion */
-
-
 details {
   @apply cursor-pointer p-2;
 
@@ -202,6 +200,73 @@ details {
 
 .badge-outline {
   @apply border-border bg-transparent text-foreground;
+}
+
+
+/* breadcrumbs */
+
+.breadcrumbs {
+  @apply flex flex-wrap items-center gap-1 text-sm text-muted-foreground list-none p-0 m-0;
+}
+
+.breadcrumb-item {
+  @apply flex items-center gap-1;
+}
+
+.breadcrumb-link {
+  @apply hover:text-foreground transition-colors;
+}
+
+.breadcrumb-current {
+  @apply text-foreground font-medium;
+}
+
+.breadcrumb-sep {
+  @apply text-muted-foreground mx-1 select-none;
+}
+
+
+/* button */
+
+.btn {
+  @apply focus-visible:border-ring focus-visible:ring-ring/50
+    aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40
+    aria-invalid:border-destructive dark:aria-invalid:border-destructive/50
+    rounded-lg border border-transparent bg-clip-padding
+    text-sm font-medium
+    focus-visible:ring-3 aria-invalid:ring-3
+    [&_svg:not([class*='size-'])]:size-4
+    inline-flex items-center justify-center whitespace-nowrap
+    transition-all disabled:pointer-events-none disabled:opacity-50
+    [&_svg]:pointer-events-none
+    shrink-0 [&_svg]:shrink-0
+    outline-none select-none cursor-pointer
+    h-8 gap-1.5 px-2.5
+    has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2;
+}
+
+.btn-default {
+  @apply bg-foreground text-background hover:bg-foreground/90;
+}
+
+.btn-outline {
+  @apply border-border bg-background hover:bg-accent hover:text-accent-foreground;
+}
+
+.btn-destructive {
+  @apply bg-destructive text-destructive-foreground hover:bg-destructive/90;
+}
+
+.btn-ghost {
+  @apply hover:bg-accent hover:text-accent-foreground;
+}
+
+.btn-secondary {
+  @apply bg-secondary text-secondary-foreground hover:bg-secondary/80;
+}
+
+.btn-link {
+  @apply text-foreground underline-offset-4 hover:underline;
 }
 
 

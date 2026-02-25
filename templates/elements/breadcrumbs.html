@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+
+{% block title %}Breadcrumbs{% endblock %}
+
+{% block head %}
+    <script src={{ url_for('static', filename='js/breadcrumbs.js') }} defer></script>
+{% endblock %}
+
+{% block content %}
+<section class="p-4 flex flex-col gap-2">
+    <h1>Breadcrumbs</h1>
+    <p>
+        A navigation aid showing the user's current location within a hierarchy.
+    </p>
+
+    <hr>
+    <div class="flex flex-col gap-4">
+        <h3>Default</h3>
+        <div class="flex flex-col gap-1.5">
+            <span class="text-xs font-mono uppercase tracking-widest text-muted-foreground">Code</span>
+            <pre><code>&lt;x-breadcrumbs&gt;
+    &lt;x-crumb href="/"&gt;Home&lt;/x-crumb&gt;
+    &lt;x-crumb href="/kingdom"&gt;Kingdom&lt;/x-crumb&gt;
+    &lt;x-crumb&gt;Tax Records&lt;/x-crumb&gt;
+&lt;/x-breadcrumbs&gt;</code></pre>
+        </div>
+        <div class="flex flex-col gap-1.5">
+            <span class="text-xs font-mono uppercase tracking-widest text-muted-foreground">Preview</span>
+            <div class="rounded-lg border border-border p-4">
+                <x-breadcrumbs>
+                    <x-crumb href="/">Home</x-crumb>
+                    <x-crumb href="/kingdom">Kingdom</x-crumb>
+                    <x-crumb>Tax Records</x-crumb>
+                </x-breadcrumbs>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+    <div class="flex flex-col gap-4">
+        <h3>Deeper Hierarchy</h3>
+        <div class="flex flex-col gap-1.5">
+            <span class="text-xs font-mono uppercase tracking-widest text-muted-foreground">Code</span>
+            <pre><code>&lt;x-breadcrumbs&gt;
+    &lt;x-crumb href="/"&gt;Home&lt;/x-crumb&gt;
+    &lt;x-crumb href="/kingdom"&gt;Kingdom&lt;/x-crumb&gt;
+    &lt;x-crumb href="/kingdom/court"&gt;Royal Court&lt;/x-crumb&gt;
+    &lt;x-crumb href="/kingdom/court/decrees"&gt;Decrees&lt;/x-crumb&gt;
+    &lt;x-crumb&gt;Joke Tax Amendment III&lt;/x-crumb&gt;
+&lt;/x-breadcrumbs&gt;</code></pre>
+        </div>
+        <div class="flex flex-col gap-1.5">
+            <span class="text-xs font-mono uppercase tracking-widest text-muted-foreground">Preview</span>
+            <div class="rounded-lg border border-border p-4">
+                <x-breadcrumbs>
+                    <x-crumb href="/">Home</x-crumb>
+                    <x-crumb href="/kingdom">Kingdom</x-crumb>
+                    <x-crumb href="/kingdom/court">Royal Court</x-crumb>
+                    <x-crumb href="/kingdom/court/decrees">Decrees</x-crumb>
+                    <x-crumb>Joke Tax Amendment III</x-crumb>
+                </x-breadcrumbs>
+            </div>
+        </div>
+    </div>
+
+</section>
+{% endblock %}

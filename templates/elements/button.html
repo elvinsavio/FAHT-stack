@@ -1,0 +1,140 @@
+{% extends "base.html" %}
+
+{% block title %}Button{% endblock %}
+
+{% block head %}
+    <script src={{ url_for('static', filename='js/button.js') }} defer></script>
+{% endblock %}
+
+{% block content %}
+<section class="p-4 flex flex-col gap-2">
+    <h1>Button</h1>
+    <p>
+        Interactive trigger for actions. Supports default, outline, destructive, ghost, secondary, and link variants.
+        Renders as a <code>&lt;button&gt;</code> by default, or as an <code>&lt;a&gt;</code> when an <code>href</code> is provided.
+    </p>
+
+    <hr>
+    <div class="flex flex-col gap-4">
+        <h3>Default</h3>
+        <div class="flex flex-col gap-1.5">
+            <span class="text-xs font-mono uppercase tracking-widest text-muted-foreground">Code</span>
+            <pre><code>&lt;x-button variant="default"&gt;Issue Decree&lt;/x-button&gt;</code></pre>
+        </div>
+        <div class="flex flex-col gap-1.5">
+            <span class="text-xs font-mono uppercase tracking-widest text-muted-foreground">Preview</span>
+            <div class="rounded-lg border border-border p-4">
+                <x-button variant="default">Issue Decree</x-button>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+    <div class="flex flex-col gap-4">
+        <h3>Outline</h3>
+        <div class="flex flex-col gap-1.5">
+            <span class="text-xs font-mono uppercase tracking-widest text-muted-foreground">Code</span>
+            <pre><code>&lt;x-button variant="outline"&gt;Review Petition&lt;/x-button&gt;</code></pre>
+        </div>
+        <div class="flex flex-col gap-1.5">
+            <span class="text-xs font-mono uppercase tracking-widest text-muted-foreground">Preview</span>
+            <div class="rounded-lg border border-border p-4">
+                <x-button variant="outline">Review Petition</x-button>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+    <div class="flex flex-col gap-4">
+        <h3>Destructive</h3>
+        <div class="flex flex-col gap-1.5">
+            <span class="text-xs font-mono uppercase tracking-widest text-muted-foreground">Code</span>
+            <pre><code>&lt;x-button variant="destructive"&gt;Revoke Charter&lt;/x-button&gt;</code></pre>
+        </div>
+        <div class="flex flex-col gap-1.5">
+            <span class="text-xs font-mono uppercase tracking-widest text-muted-foreground">Preview</span>
+            <div class="rounded-lg border border-border p-4">
+                <x-button variant="destructive">Revoke Charter</x-button>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+    <div class="flex flex-col gap-4">
+        <h3>Ghost</h3>
+        <div class="flex flex-col gap-1.5">
+            <span class="text-xs font-mono uppercase tracking-widest text-muted-foreground">Code</span>
+            <pre><code>&lt;x-button variant="ghost"&gt;Dismiss Guard&lt;/x-button&gt;</code></pre>
+        </div>
+        <div class="flex flex-col gap-1.5">
+            <span class="text-xs font-mono uppercase tracking-widest text-muted-foreground">Preview</span>
+            <div class="rounded-lg border border-border p-4">
+                <x-button variant="ghost">Dismiss Guard</x-button>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+    <div class="flex flex-col gap-4">
+        <h3>Secondary</h3>
+        <div class="flex flex-col gap-1.5">
+            <span class="text-xs font-mono uppercase tracking-widest text-muted-foreground">Code</span>
+            <pre><code>&lt;x-button variant="secondary"&gt;Adjourn Council&lt;/x-button&gt;</code></pre>
+        </div>
+        <div class="flex flex-col gap-1.5">
+            <span class="text-xs font-mono uppercase tracking-widest text-muted-foreground">Preview</span>
+            <div class="rounded-lg border border-border p-4">
+                <x-button variant="secondary">Adjourn Council</x-button>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+    <div class="flex flex-col gap-4">
+        <h3>Link</h3>
+        <div class="flex flex-col gap-1.5">
+            <span class="text-xs font-mono uppercase tracking-widest text-muted-foreground">Code</span>
+            <pre><code>&lt;x-button variant="link"&gt;Read the Edict&lt;/x-button&gt;</code></pre>
+        </div>
+        <div class="flex flex-col gap-1.5">
+            <span class="text-xs font-mono uppercase tracking-widest text-muted-foreground">Preview</span>
+            <div class="rounded-lg border border-border p-4">
+                <x-button variant="link">Read the Edict</x-button>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+    <div class="flex flex-col gap-4">
+        <h3>Disabled</h3>
+        <div class="flex flex-col gap-1.5">
+            <span class="text-xs font-mono uppercase tracking-widest text-muted-foreground">Code</span>
+            <pre><code>&lt;x-button variant="default" disabled&gt;Sealed by the Crown&lt;/x-button&gt;</code></pre>
+        </div>
+        <div class="flex flex-col gap-1.5">
+            <span class="text-xs font-mono uppercase tracking-widest text-muted-foreground">Preview</span>
+            <div class="rounded-lg border border-border p-4 flex gap-2">
+                <x-button variant="default" disabled>Sealed by the Crown</x-button>
+                <x-button variant="outline" disabled>Sealed by the Crown</x-button>
+                <x-button variant="destructive" disabled>Sealed by the Crown</x-button>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+    <div class="flex flex-col gap-4">
+        <h3>As Link</h3>
+        <div class="flex flex-col gap-1.5">
+            <span class="text-xs font-mono uppercase tracking-widest text-muted-foreground">Code</span>
+            <pre><code>&lt;x-button variant="default" href="#"&gt;Visit the Treasury&lt;/x-button&gt;</code></pre>
+        </div>
+        <div class="flex flex-col gap-1.5">
+            <span class="text-xs font-mono uppercase tracking-widest text-muted-foreground">Preview</span>
+            <div class="rounded-lg border border-border p-4">
+                <x-button variant="default" href="#">Visit the Treasury</x-button>
+            </div>
+        </div>
+    </div>
+
+</section>
+{% endblock %}

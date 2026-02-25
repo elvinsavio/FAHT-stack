@@ -52,6 +52,7 @@
     --color-muted: hsl(240 4.8% 95.9%);
     --color-muted-foreground: hsl(240 3.8% 46.1%);
     --color-accent: hsl(240 4.8% 95.9%);
+    --color-accent-foreground: hsl(240 5.9% 10%);
     --color-destructive: hsl(0 84.2% 60.2%);
     --color-destructive-foreground: hsl(0 0% 98%);
     --color-border: hsl(240 5.9% 90%);
@@ -813,6 +814,206 @@ details {
   border-color: var(--color-border);
   background-color: transparent;
   color: var(--color-foreground);
+}
+.breadcrumbs {
+  margin: calc(var(--spacing) * 0);
+  display: flex;
+  list-style-type: none;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: calc(var(--spacing) * 1);
+  padding: calc(var(--spacing) * 0);
+  font-size: var(--text-sm);
+  line-height: var(--tw-leading, var(--text-sm--line-height));
+  color: var(--color-muted-foreground);
+}
+.breadcrumb-item {
+  display: flex;
+  align-items: center;
+  gap: calc(var(--spacing) * 1);
+}
+.breadcrumb-link {
+  transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to;
+  transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+  transition-duration: var(--tw-duration, var(--default-transition-duration));
+  &:hover {
+    @media (hover: hover) {
+      color: var(--color-foreground);
+    }
+  }
+}
+.breadcrumb-current {
+  --tw-font-weight: var(--font-weight-medium);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-foreground);
+}
+.breadcrumb-sep {
+  margin-inline: calc(var(--spacing) * 1);
+  color: var(--color-muted-foreground);
+  -webkit-user-select: none;
+  user-select: none;
+}
+.btn {
+  display: inline-flex;
+  height: calc(var(--spacing) * 8);
+  flex-shrink: 0;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  gap: calc(var(--spacing) * 1.5);
+  border-radius: var(--radius-lg);
+  border-style: var(--tw-border-style);
+  border-width: 1px;
+  border-color: transparent;
+  background-clip: padding-box;
+  padding-inline: calc(var(--spacing) * 2.5);
+  font-size: var(--text-sm);
+  line-height: var(--tw-leading, var(--text-sm--line-height));
+  --tw-font-weight: var(--font-weight-medium);
+  font-weight: var(--font-weight-medium);
+  white-space: nowrap;
+  transition-property: all;
+  transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+  transition-duration: var(--tw-duration, var(--default-transition-duration));
+  --tw-outline-style: none;
+  outline-style: none;
+  -webkit-user-select: none;
+  user-select: none;
+  &:focus-visible {
+    border-color: var(--color-ring);
+  }
+  &:focus-visible {
+    --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(3px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  &:focus-visible {
+    --tw-ring-color: color-mix(in srgb, hsl(142.1 76.2% 36.3%) 50%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      --tw-ring-color: color-mix(in oklab, var(--color-ring) 50%, transparent);
+    }
+  }
+  &:disabled {
+    pointer-events: none;
+  }
+  &:disabled {
+    opacity: 50%;
+  }
+  &:has(*[data-icon="inline-end"]) {
+    padding-right: calc(var(--spacing) * 2);
+  }
+  &:has(*[data-icon="inline-start"]) {
+    padding-left: calc(var(--spacing) * 2);
+  }
+  &[aria-invalid="true"] {
+    border-color: var(--color-destructive);
+  }
+  &[aria-invalid="true"] {
+    --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(3px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  &[aria-invalid="true"] {
+    --tw-ring-color: color-mix(in srgb, hsl(0 84.2% 60.2%) 20%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      --tw-ring-color: color-mix(in oklab, var(--color-destructive) 20%, transparent);
+    }
+  }
+  @media (prefers-color-scheme: dark) {
+    &[aria-invalid="true"] {
+      border-color: color-mix(in srgb, hsl(0 84.2% 60.2%) 50%, transparent);
+      @supports (color: color-mix(in lab, red, red)) {
+        border-color: color-mix(in oklab, var(--color-destructive) 50%, transparent);
+      }
+    }
+  }
+  @media (prefers-color-scheme: dark) {
+    &[aria-invalid="true"] {
+      --tw-ring-color: color-mix(in srgb, hsl(0 84.2% 60.2%) 40%, transparent);
+      @supports (color: color-mix(in lab, red, red)) {
+        --tw-ring-color: color-mix(in oklab, var(--color-destructive) 40%, transparent);
+      }
+    }
+  }
+  & svg {
+    pointer-events: none;
+  }
+  & svg {
+    flex-shrink: 0;
+  }
+  & svg:not([class*='size-']) {
+    width: calc(var(--spacing) * 4);
+    height: calc(var(--spacing) * 4);
+  }
+}
+.btn-default {
+  background-color: var(--color-foreground);
+  color: var(--color-background);
+  &:hover {
+    @media (hover: hover) {
+      background-color: color-mix(in srgb, hsl(240 10% 3.9%) 90%, transparent);
+      @supports (color: color-mix(in lab, red, red)) {
+        background-color: color-mix(in oklab, var(--color-foreground) 90%, transparent);
+      }
+    }
+  }
+}
+.btn-outline {
+  border-color: var(--color-border);
+  background-color: var(--color-background);
+  &:hover {
+    @media (hover: hover) {
+      background-color: var(--color-accent);
+    }
+  }
+  &:hover {
+    @media (hover: hover) {
+      color: var(--color-accent-foreground);
+    }
+  }
+}
+.btn-destructive {
+  background-color: var(--color-destructive);
+  color: var(--color-destructive-foreground);
+  &:hover {
+    @media (hover: hover) {
+      background-color: color-mix(in srgb, hsl(0 84.2% 60.2%) 90%, transparent);
+      @supports (color: color-mix(in lab, red, red)) {
+        background-color: color-mix(in oklab, var(--color-destructive) 90%, transparent);
+      }
+    }
+  }
+}
+.btn-ghost {
+  &:hover {
+    @media (hover: hover) {
+      background-color: var(--color-accent);
+    }
+  }
+  &:hover {
+    @media (hover: hover) {
+      color: var(--color-accent-foreground);
+    }
+  }
+}
+.btn-secondary {
+  background-color: var(--color-secondary);
+  color: var(--color-secondary-foreground);
+  &:hover {
+    @media (hover: hover) {
+      background-color: color-mix(in srgb, hsl(240 4.8% 95.9%) 80%, transparent);
+      @supports (color: color-mix(in lab, red, red)) {
+        background-color: color-mix(in oklab, var(--color-secondary) 80%, transparent);
+      }
+    }
+  }
+}
+.btn-link {
+  color: var(--color-foreground);
+  text-underline-offset: 4px;
+  &:hover {
+    @media (hover: hover) {
+      text-decoration-line: underline;
+    }
+  }
 }
 .card {
   display: flex;
