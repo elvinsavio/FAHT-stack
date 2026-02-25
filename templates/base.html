@@ -21,11 +21,6 @@
 </head>
 
 <body class="bg-background text-foreground dark flex">
-    <template id="icon-info">{% include "icons/info.html" %}</template>
-    <template id="icon-success">{% include "icons/success.html" %}</template>
-    <template id="icon-destructive">{% include "icons/destructive.html" %}</template>
-    <template id="icon-warning">{% include "icons/warning.html" %}</template>
-    <template id="icon-cross">{% include "icons/cross.html" %}</template>
     {% include "partials/sidebar.html" %}
     <div class="flex-1 overflow-auto h-screen">
         {% block content %}{% endblock %}
