@@ -21,6 +21,11 @@ elements: List[Element] = [
         description="A collection of button variants and sizes.",
         link="/button",
     ),
+    Element(
+        name="Accordion",
+        description="Collapsible sections using native details and summary elements.",
+        link="/accordion",
+    ),
 ]
 
 

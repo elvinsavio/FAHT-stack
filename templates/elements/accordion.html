@@ -1,0 +1,137 @@
+{% extends "base.html" %}
+
+{% block title %}Accordion{% endblock %}
+
+{% block content %}
+<section class="p-4 flex flex-col gap-2">
+    <h1>Accordion</h1>
+    <p>
+        Accordion uses native <code>&lt;details&gt;</code> and <code>&lt;summary&gt;</code> elements. No JavaScript required.
+    </p>
+
+    <hr>
+    <div class="flex flex-col gap-4">
+        <h3>Single</h3>
+        <div class="flex flex-col gap-1.5">
+            <span class="text-xs font-mono uppercase tracking-widest text-muted-foreground">Code</span>
+            <pre><code>&lt;details&gt;
+  &lt;summary&gt;What is the Joke Tax?&lt;/summary&gt;
+  &lt;p&gt;A royal levy on every joke told within the kingdom walls.&lt;/p&gt;
+&lt;/details&gt;</code></pre>
+        </div>
+        <div class="flex flex-col gap-1.5">
+            <span class="text-xs font-mono uppercase tracking-widest text-muted-foreground">Preview</span>
+            <div class="rounded-lg border border-border p-4">
+                <details>
+                    <summary>What is the Joke Tax?</summary>
+                    <p>A royal levy imposed by King Taxington III on every joke told within the kingdom walls. A punchline is worth a penny, and a penny funds the realm.</p>
+                </details>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+    <div class="flex flex-col gap-4">
+        <h3>Group</h3>
+        <div class="flex flex-col gap-1.5">
+            <span class="text-xs font-mono uppercase tracking-widest text-muted-foreground">Code</span>
+            <pre><code>&lt;div&gt;
+  &lt;details&gt;
+    &lt;summary&gt;Item one&lt;/summary&gt;
+    &lt;p&gt;Content for item one.&lt;/p&gt;
+  &lt;/details&gt;
+  &lt;details&gt;
+    &lt;summary&gt;Item two&lt;/summary&gt;
+    &lt;p&gt;Content for item two.&lt;/p&gt;
+  &lt;/details&gt;
+  &lt;details&gt;
+    &lt;summary&gt;Item three&lt;/summary&gt;
+    &lt;p&gt;Content for item three.&lt;/p&gt;
+  &lt;/details&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+        <div class="flex flex-col gap-1.5">
+            <span class="text-xs font-mono uppercase tracking-widest text-muted-foreground">Preview</span>
+            <div class="rounded-lg border border-border p-4">
+                <div>
+                    <details>
+                        <summary>Why did the king tax jokes?</summary>
+                        <p>The kingdom's treasury ran dry and the king, after much deliberation, decided to tax the one thing his people loved most: laughter.</p>
+                    </details>
+                    <details>
+                        <summary>How much is a joke taxed?</summary>
+                        <p>The rate depends on the quality of the joke. A knock-knock joke costs one copper, a pun costs two, and a full stand-up routine requires a royal permit.</p>
+                    </details>
+                    <details>
+                        <summary>What happened to the jesters?</summary>
+                        <p>Most fled to neighbouring kingdoms. Those who stayed filed for jester bankruptcy and now perform only mimes, which are yet to be taxed.</p>
+                    </details>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+    <div class="flex flex-col gap-4">
+        <h3>Open by Default</h3>
+        <div class="flex flex-col gap-1.5">
+            <span class="text-xs font-mono uppercase tracking-widest text-muted-foreground">Code</span>
+            <pre><code>&lt;details open&gt;
+  &lt;summary&gt;Already open&lt;/summary&gt;
+  &lt;p&gt;This item starts expanded.&lt;/p&gt;
+&lt;/details&gt;</code></pre>
+        </div>
+        <div class="flex flex-col gap-1.5">
+            <span class="text-xs font-mono uppercase tracking-widest text-muted-foreground">Preview</span>
+            <div class="rounded-lg border border-border p-4">
+                <div>
+                    <details>
+                        <summary>Can I appeal my joke tax?</summary>
+                        <p>Appeals are heard every full moon by the Royal Court of Comedy. Bring receipts.</p>
+                    </details>
+                    <details open>
+                        <summary>What is the current tax rate?</summary>
+                        <p>As of the last royal decree, the standard rate is 25% per punchline, with a 10% surcharge for dad jokes.</p>
+                    </details>
+                    <details>
+                        <summary>Are puns taxed separately?</summary>
+                        <p>Yes. Puns fall under the Wordplay Levy, a separate clause introduced after the Great Pun Epidemic of year three.</p>
+                    </details>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+    <div class="flex flex-col gap-4">
+        <h3>Disabled</h3>
+        <div class="flex flex-col gap-1.5">
+            <span class="text-xs font-mono uppercase tracking-widest text-muted-foreground">Code</span>
+            <pre><code>&lt;details disabled&gt;
+  &lt;summary&gt;Unavailable&lt;/summary&gt;
+  &lt;p&gt;This item cannot be opened.&lt;/p&gt;
+&lt;/details&gt;</code></pre>
+        </div>
+        <div class="flex flex-col gap-1.5">
+            <span class="text-xs font-mono uppercase tracking-widest text-muted-foreground">Preview</span>
+            <div class="rounded-lg border border-border p-4">
+                <div>
+                    <details>
+                        <summary>How do I pay the joke tax?</summary>
+                        <p>Drop your coins in the Royal Laugh Box located at the town square. Receipts issued upon request.</p>
+                    </details>
+                    <details disabled>
+                        <summary>Royal Decree No. 7 — Classified</summary>
+                        <p>This information is sealed by order of King Taxington III.</p>
+                    </details>
+                    <details>
+                        <summary>Is sarcasm taxed?</summary>
+                        <p>Technically no, but the king is watching and he does not find it amusing.</p>
+                    </details>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+{% endblock %}
