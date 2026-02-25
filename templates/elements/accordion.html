@@ -6,7 +6,6 @@
 
 {% block head %}
     <script src={{ url_for('static', filename='js/accordion.js') }} defer></script>
-    <script src={{ url_for('static', filename='js/card.js') }} defer></script>
 {% endblock %}
 
 {% block content %}
@@ -95,30 +94,30 @@
         <h3>Accordion with card</h3>
         <div class="flex flex-col gap-1.5">
             <span class="text-xs font-mono uppercase tracking-widest text-muted-foreground">Code</span>
-            <pre><code>&lt;x-card&gt;
-    &lt;x-card-header&gt;
+            <pre><code>&lt;div class="card"&gt;
+    &lt;div class="header"&gt;
         &lt;h3&gt;FAQ about king tax on jokes&lt;/h3&gt;
-    &lt;/x-card-header&gt;
-    &lt;x-card-content&gt;
+    &lt;/div&gt;
+    &lt;div class="content"&gt;
         &lt;x-accordion label="Why are jokes being taxed?"&gt;
             &lt;p&gt;The king needed revenue and noticed people laughing too much for free.&lt;/p&gt;
         &lt;/x-accordion&gt;
         &lt;!-- ...more items --&gt;
-    &lt;/x-card-content&gt;
-    &lt;x-card-footer&gt;
+    &lt;/div&gt;
+    &lt;div class="footer"&gt;
         &lt;p&gt;Still have questions? Visit the Royal Bureau of Wit and Taxation.&lt;/p&gt;
         &lt;a href="#"&gt;Submit a formal inquiry&lt;/a&gt;
-    &lt;/x-card-footer&gt;
-&lt;/x-card&gt;</code></pre>
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
         </div>
         <div class="flex flex-col gap-1.5">
             <span class="text-xs font-mono uppercase tracking-widest text-muted-foreground">Preview</span>
             <div class="rounded-lg border border-border p-4">
-                <x-card class="max-w-lg mx-auto">
-                    <x-card-header>
+                <div class="card max-w-lg mx-auto">
+                    <div class="header">
                         <h3>FAQ about king tax on jokes</h3>
-                    </x-card-header>
-                    <x-card-content>
+                    </div>
+                    <div class="content">
                         <x-accordion label="Why are jokes being taxed?">
                             <p>The king needed revenue and noticed people laughing too much for free. A royal economist
                                 calculated that the average citizen laughed 47 times a day, which was deemed an untapped
@@ -140,13 +139,13 @@
                             <p>Yes. The Royal Bureau of Wit offers monthly plans starting at 50 coins, which covers unlimited
                                 puns, two slapstick incidents, and one satirical ballad per week.</p>
                         </x-accordion>
-                    </x-card-content>
-                    <x-card-footer>
+                    </div>
+                    <div class="footer">
                         <p>Still have questions? Visit the Royal Bureau of Wit and Taxation, open weekdays except Jester's
                             Holiday.</p>
                         <a href="#" aria-label="Submit a formal inquiry to the Royal Bureau of Wit and Taxation">Submit a formal inquiry</a>
-                    </x-card-footer>
-                </x-card>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

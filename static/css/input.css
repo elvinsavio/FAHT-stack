@@ -272,6 +272,20 @@ details {
 
 /* card */
 
-x-card-content p {
-  @apply !mt-0
+.card {
+  @apply ring-foreground/10 bg-card text-card-foreground flex flex-col overflow-hidden rounded-xl text-sm ring-1 w-full;
+
+  .header,
+  .content,
+  .footer {
+    @apply px-2 py-1
+  }
+
+  .header {
+    @apply py-2
+  }
+
+  .footer {
+    @apply bg-muted text-muted-foreground border-t border-border
+  }
 }
