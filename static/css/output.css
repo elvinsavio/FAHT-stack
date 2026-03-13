@@ -46,10 +46,6 @@
     --color-foreground: hsl(240 10% 3.9%);
     --color-card: hsl(0 0% 100%);
     --color-card-foreground: hsl(240 10% 3.9%);
-    --color-popover: hsl(0 0% 100%);
-    --color-popover-foreground: hsl(240 10% 3.9%);
-    --color-primary: hsl(142.1 76.2% 36.3%);
-    --color-primary-foreground: hsl(355.7 100% 97.3%);
     --color-secondary: hsl(240 4.8% 95.9%);
     --color-secondary-foreground: hsl(240 5.9% 10%);
     --color-muted: hsl(240 4.8% 95.9%);
@@ -61,13 +57,7 @@
     --color-border: hsl(240 5.9% 90%);
     --color-input: hsl(240 5.9% 90%);
     --color-ring: hsl(142.1 76.2% 36.3%);
-    --color-chart-1: hsl(12 76% 61%);
-    --color-chart-2: hsl(173 58% 39%);
-    --color-chart-3: hsl(197 37% 24%);
-    --color-chart-4: hsl(43 74% 66%);
-    --color-chart-5: hsl(27 87% 67%);
     --color-warning: hsl(38 92% 50%);
-    --color-info: hsl(214 100% 50%);
   }
 }
 @layer base {
@@ -219,6 +209,9 @@
   .static {
     position: static;
   }
+  .mx-auto {
+    margin-inline: auto;
+  }
   .mt-1 {
     margin-top: calc(var(--spacing) * 1);
   }
@@ -237,9 +230,6 @@
   .hidden {
     display: none;
   }
-  .table {
-    display: table;
-  }
   .h-screen {
     height: 100vh;
   }
@@ -249,23 +239,14 @@
   .w-full {
     width: 100%;
   }
+  .max-w-1\/2 {
+    max-width: calc(1/2 * 100%);
+  }
   .flex-1 {
     flex: 1;
   }
-  .flex-shrink {
-    flex-shrink: 1;
-  }
   .shrink-0 {
     flex-shrink: 0;
-  }
-  .border-collapse {
-    border-collapse: collapse;
-  }
-  .transform {
-    transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
-  }
-  .resize {
-    resize: both;
   }
   .flex-col {
     flex-direction: column;
@@ -368,9 +349,6 @@
     --tw-tracking: var(--tracking-widest);
     letter-spacing: var(--tracking-widest);
   }
-  .text-wrap {
-    text-wrap: wrap;
-  }
   .text-foreground {
     color: var(--color-foreground);
   }
@@ -380,17 +358,9 @@
   .uppercase {
     text-transform: uppercase;
   }
-  .underline {
-    text-decoration-line: underline;
-  }
   .outline {
     outline-style: var(--tw-outline-style);
     outline-width: 1px;
-  }
-  .transition {
-    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter;
-    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
-    transition-duration: var(--tw-duration, var(--default-transition-duration));
   }
   .hover\:bg-accent {
     &:hover {
@@ -828,7 +798,7 @@ button {
       }
     }
   }
-  &[data-variant="outline"] {
+  &.outline {
     border-style: var(--tw-border-style);
     border-width: 1px;
     border-color: var(--color-border);
@@ -845,7 +815,7 @@ button {
       }
     }
   }
-  &[data-variant="ghost"] {
+  &.ghost {
     background-color: transparent;
     color: var(--color-foreground);
     &:hover {
@@ -859,7 +829,7 @@ button {
       }
     }
   }
-  &[data-variant="destructive"] {
+  &.destructive {
     background-color: var(--color-destructive);
     color: var(--color-destructive-foreground);
     &:hover {
@@ -871,38 +841,18 @@ button {
       }
     }
   }
-  &[data-size="sm"] {
+  &.sm {
     padding-inline: calc(var(--spacing) * 3);
     padding-block: calc(var(--spacing) * 1.5);
     font-size: var(--text-xs);
     line-height: var(--tw-leading, var(--text-xs--line-height));
   }
-  &[data-size="lg"] {
+  &.lg {
     padding-inline: calc(var(--spacing) * 6);
     padding-block: calc(var(--spacing) * 2.5);
     font-size: var(--text-base);
     line-height: var(--tw-leading, var(--text-base--line-height));
   }
-}
-@property --tw-rotate-x {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-rotate-y {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-rotate-z {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-skew-x {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-skew-y {
-  syntax: "*";
-  inherits: false;
 }
 @property --tw-space-y-reverse {
   syntax: "*";
@@ -1007,11 +957,6 @@ button {
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
-      --tw-rotate-x: initial;
-      --tw-rotate-y: initial;
-      --tw-rotate-z: initial;
-      --tw-skew-x: initial;
-      --tw-skew-y: initial;
       --tw-space-y-reverse: 0;
       --tw-border-style: solid;
       --tw-font-weight: initial;

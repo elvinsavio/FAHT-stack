@@ -230,23 +230,23 @@ button {
   @apply focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring;
   @apply bg-secondary text-secondary-foreground hover:bg-secondary/80;
 
-  &[data-variant="outline"] {
+  &.outline {
     @apply border border-border bg-transparent text-foreground hover:bg-accent hover:text-accent-foreground;
   }
 
-  &[data-variant="ghost"] {
+  &.ghost {
     @apply bg-transparent text-foreground hover:bg-accent hover:text-accent-foreground;
   }
 
-  &[data-variant="destructive"] {
+  &.destructive {
     @apply bg-destructive text-destructive-foreground hover:bg-destructive/90;
   }
 
-  &[data-size="sm"] {
+  &.sm {
     @apply px-3 py-1.5 text-xs;
   }
 
-  &[data-size="lg"] {
+  &.lg {
     @apply px-6 py-2.5 text-base;
   }
 }
